@@ -1,6 +1,6 @@
 # Martinez Studio
 
-Static product website for [martinezstudio.dev](https://martinezstudio.dev), hosted with GitHub Pages.
+Source code for the [martinezstudio.dev](https://martinezstudio.dev) product website. Production publishing is handled by Cloudflare.
 
 ## Purpose
 
@@ -24,8 +24,8 @@ Martinez Studio is the public home for current and future apps. The site separat
 ├── data/apps.json        # Homepage catalog source of truth
 ├── index.html            # Studio homepage
 ├── privacy.html          # Website privacy disclosure
-├── CNAME                 # GitHub Pages custom-domain declaration
-└── .nojekyll             # Serve static files directly
+├── robots.txt            # Search crawler policy
+└── sitemap.xml           # Public route inventory
 ```
 
 ## Adding a future app
@@ -45,18 +45,6 @@ python3 -m http.server 4174
 
 Open `http://localhost:4174`.
 
-## GitHub Pages and DNS
+## Deployment
 
-The site publishes from the `main` branch root. `CNAME` declares `martinezstudio.dev` as the custom domain.
-
-Configure the following records at the domain's DNS provider:
-
-| Type | Host | Value |
-| --- | --- | --- |
-| A | `@` | `185.199.108.153` |
-| A | `@` | `185.199.109.153` |
-| A | `@` | `185.199.110.153` |
-| A | `@` | `185.199.111.153` |
-| CNAME | `www` | `omar-martinez-dev.github.io` |
-
-After DNS resolves and GitHub's domain check succeeds, enable **Enforce HTTPS** in the repository's Pages settings. DNS changes may take time to propagate.
+Cloudflare should deploy the `main` branch as a static site with no framework build step and the repository root as the published output. Configure `martinezstudio.dev` and its DNS records in Cloudflare rather than through repository files.
