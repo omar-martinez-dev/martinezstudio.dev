@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Martinez Studio builds focused apps that respect attention, privacy, and the work users came to do.">
+  <meta name="theme-color" content="#0b0c10">
+  <meta property="og:title" content="Martinez Studio — Focused apps, thoughtfully built">
+  <meta property="og:description" content="Independent apps for creative practice and everyday focus.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://martinezstudio.dev/">
+  <title>Martinez Studio — Focused apps, thoughtfully built</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="studio-header" data-header>
+    <a class="studio-mark" href="#top" aria-label="Martinez Studio, home">
+      <span class="mark-symbol" aria-hidden="true">M</span>
+      <span>Martinez Studio</span>
+    </a>
+    <nav aria-label="Primary navigation">
+      <a href="#apps">Apps</a>
+      <a href="#principles">Principles</a>
+      <a href="https://github.com/omar-martinez-dev">GitHub</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="studio-hero" id="top" aria-labelledby="hero-title">
+      <div class="hero-noise" aria-hidden="true"></div>
+      <div class="hero-copy">
+        <p class="kicker enter">Independent software studio</p>
+        <h1 id="hero-title" class="enter delay-1">Focused apps.<br><em>Thoughtfully built.</em></h1>
+        <p class="hero-summary enter delay-2">Tools that protect attention, explain their choices, and stay out of the way when the real work begins.</p>
+        <a class="round-link enter delay-3" href="#apps">View current apps <span aria-hidden="true">↓</span></a>
+      </div>
+
+      <div class="hero-product enter delay-2" data-depth>
+        <div class="sun" aria-hidden="true"></div>
+        <figure class="device device-primary">
+          <img src="assets/screenshots/ostinova-metronome.jpg" alt="Ostinova metronome interface">
+        </figure>
+        <img class="floating-icon" src="assets/ostinova-icon.png" alt="Ostinova app icon" width="116" height="116">
+        <p class="hero-caption">First from the studio<br><strong>Ostinova</strong></p>
+      </div>
+    </section>
+
+    <section class="manifesto" aria-label="Studio promise">
+      <p class="reveal">Software should feel clear before it feels clever.</p>
+    </section>
+
+    <section class="apps-section" id="apps" aria-labelledby="apps-title">
+      <div class="section-intro reveal">
+        <p class="kicker">Current catalog</p>
+        <h2 id="apps-title">Built around the work,<br>not the screen time.</h2>
+      </div>
+      <div id="app-list" class="app-list" aria-live="polite"></div>
+      <noscript>
+        <p>JavaScript is required to load the current app catalog. Visit the <a href="apps/ostinova/">Ostinova product page</a>.</p>
+      </noscript>
+    </section>
+
+    <section class="principles-section" id="principles" aria-labelledby="principles-title">
+      <div class="section-intro reveal">
+        <p class="kicker">Studio principles</p>
+        <h2 id="principles-title">A small set of standards,<br>applied all the way through.</h2>
+      </div>
+      <div class="principle-list">
+        <article class="reveal">
+          <p class="index">01</p>
+          <h3>Attention is finite.</h3>
+          <p>Primary workflows stay calm, direct, and free of interruptions that compete with the user’s goal.</p>
+        </article>
+        <article class="reveal">
+          <p class="index">02</p>
+          <h3>Privacy is interface design.</h3>
+          <p>System permissions and business models are explained in product language before a decision is requested.</p>
+        </article>
+        <article class="reveal">
+          <p class="index">03</p>
+          <h3>Local is a feature.</h3>
+          <p>When a backend is not essential, on-device storage keeps products fast, available, and easier to trust.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="future-section reveal" aria-labelledby="future-title">
+      <p class="kicker">What comes next</p>
+      <h2 id="future-title">This catalog is designed to grow without losing its point of view.</h2>
+      <p>New products will appear here as they become ready to use—not before.</p>
+      <a class="round-link round-link-dark" href="https://github.com/omar-martinez-dev">Follow the work on GitHub <span aria-hidden="true">↗</span></a>
+    </section>
+  </main>
+
+  <footer>
+    <a class="studio-mark" href="#top"><span class="mark-symbol" aria-hidden="true">M</span><span>Martinez Studio</span></a>
+    <p>Independent apps for focused work.</p>
+    <div class="footer-links">
+      <a href="privacy.html">Website privacy</a>
+      <a href="https://omar-martinez-dev.github.io">Developer portfolio</a>
+    </div>
+    <p class="copyright">© <span data-year>2026</span> Martinez Studio</p>
+  </footer>
+</body>
+</html>
