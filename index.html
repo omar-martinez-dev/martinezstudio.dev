@@ -4,17 +4,17 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Martinez Studio makes focused, privacy-conscious apps for creative practice.">
-  <meta name="theme-color" content="#f2efe7">
-  <meta property="og:title" content="Martinez Studio — Useful software, quietly ambitious">
+  <meta name="theme-color" content="#f7f5f0">
+  <meta property="og:title" content="Martinez Studio — Software for focused work">
   <meta property="og:description" content="Independent apps for creative practice and everyday focus.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://martinezstudio.dev/">
-  <title>Martinez Studio — Useful software, quietly ambitious</title>
+  <title>Martinez Studio — Software for focused work</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css">
   <script src="script.js" defer></script>
 </head>
-<body>
+<body class="studio-home">
   <a class="skip-link" href="#main">Skip to content</a>
 
   <header class="site-header" data-header>
@@ -26,51 +26,50 @@
       <a href="#work">Work</a>
       <a href="#principles">Principles</a>
       <a href="apps/ostinova/privacy.html">Privacy</a>
-      <a class="nav-cta" href="https://github.com/omar-martinez-dev">GitHub <span aria-hidden="true">↗</span></a>
     </nav>
+    <a class="nav-cta" href="https://github.com/omar-martinez-dev">GitHub <span aria-hidden="true">↗</span></a>
   </header>
 
   <main id="main">
     <section class="hero" id="top">
       <div class="hero-copy">
-        <p class="eyebrow enter">Independent software studio · California</p>
-        <h1 class="enter delay-1">Useful software,<br><em>quietly ambitious.</em></h1>
-        <p class="hero-dek enter delay-2">We build focused tools for people who care about craft. Clear choices, local-first thinking, and no attention traps.</p>
+        <p class="eyebrow eyebrow-pill enter"><span aria-hidden="true"></span> Independent software · California</p>
+        <h1 class="enter delay-1">Software for the work<br><em>you want to stay with.</em></h1>
+        <p class="hero-dek enter delay-2">Martinez Studio makes calm, capable tools for creative practice—built around clear choices, local-first thinking, and respect for attention.</p>
         <div class="hero-actions enter delay-3">
-          <a class="button button-dark" href="#work">Explore the work <span aria-hidden="true">↓</span></a>
-          <p><strong>01</strong> product in active development</p>
+          <a class="button button-dark" href="#work">See what we’re making <span aria-hidden="true">↓</span></a>
+          <a class="quiet-link" href="#principles">Our principles</a>
         </div>
       </div>
 
-      <div class="hero-stage enter delay-2" aria-label="Ostinova app preview">
-        <div class="stage-orbit" aria-hidden="true"></div>
-        <p class="stage-note stage-note-top">Designed for the<br>practice room</p>
-        <figure class="phone phone-main">
-          <img src="assets/screenshots/ostinova-metronome.jpg" alt="Ostinova metronome interface">
-        </figure>
-        <figure class="phone phone-secondary" aria-hidden="true">
-          <img src="assets/screenshots/ostinova-practice.jpg" alt="">
-        </figure>
-        <div class="stage-badge">
-          <img src="assets/ostinova-icon.png" alt="" width="52" height="52">
-          <span>Ostinova<br><strong>In development</strong></span>
+      <div class="product-window enter delay-3" aria-label="Ostinova app preview">
+        <div class="window-bar" aria-hidden="true">
+          <span>Product 001</span><span class="window-status">In active development</span><span>iPhone</span>
+        </div>
+        <div class="window-stage">
+          <p class="stage-word" aria-hidden="true">OSTINOVA</p>
+          <p class="stage-caption">A practice companion<br>for musicians.</p>
+          <figure class="phone phone-main">
+            <img src="assets/screenshots/ostinova-metronome.jpg" alt="Ostinova metronome interface">
+          </figure>
+          <figure class="phone phone-secondary" aria-hidden="true">
+            <img src="assets/screenshots/ostinova-practice.jpg" alt="">
+          </figure>
+          <a class="stage-link" href="apps/ostinova/">Meet Ostinova <span aria-hidden="true">↗</span></a>
         </div>
       </div>
     </section>
 
-    <section class="ticker" aria-label="Studio characteristics">
-      <div>
-        <span>Local-first</span><i aria-hidden="true">✦</i>
-        <span>Privacy-conscious</span><i aria-hidden="true">✦</i>
-        <span>Purpose-built</span><i aria-hidden="true">✦</i>
-        <span>Human scale</span><i aria-hidden="true">✦</i>
-      </div>
+    <section class="studio-strip" aria-label="Studio characteristics">
+      <p><span>01</span> Local-first where it matters</p>
+      <p><span>02</span> Privacy in plain language</p>
+      <p><span>03</span> Built at human scale</p>
     </section>
 
     <section class="work" id="work" aria-labelledby="work-title">
       <div class="section-heading reveal">
         <p class="eyebrow">Current work</p>
-        <h2 id="work-title">One product.<br>Every detail considered.</h2>
+        <h2 id="work-title">One product.<br><em>Every detail considered.</em></h2>
         <p>We would rather make one coherent tool than a suite of half-finished ideas.</p>
       </div>
       <div id="app-list" class="app-list" aria-live="polite"></div>
@@ -80,48 +79,39 @@
     <section class="principles" id="principles" aria-labelledby="principles-title">
       <div class="principles-intro reveal">
         <p class="eyebrow">How we work</p>
-        <h2 id="principles-title">Calm by design.</h2>
-        <p>Restraint is not a lack of ambition. It is how the important things get enough room.</p>
+        <h2 id="principles-title">Calm is a<br><em>product decision.</em></h2>
       </div>
       <div class="principle-grid">
-        <article class="principle-card reveal">
-          <span>01</span><h3>Respect attention</h3>
-          <p>Primary workflows stay direct and free from interruptions that compete with the user’s goal.</p>
+        <article class="principle-card card-mint reveal">
+          <span class="card-number">01</span><div class="card-symbol" aria-hidden="true">◎</div>
+          <h3>Respect attention</h3><p>Primary workflows stay direct and free from interruptions that compete with the user’s goal.</p>
         </article>
-        <article class="principle-card reveal">
-          <span>02</span><h3>Explain the choice</h3>
-          <p>Permissions, privacy, and business decisions are expressed in product language before action is requested.</p>
+        <article class="principle-card card-lilac reveal">
+          <span class="card-number">02</span><div class="card-symbol" aria-hidden="true">◒</div>
+          <h3>Explain the choice</h3><p>Permissions, privacy, and business decisions are expressed in product language before action is requested.</p>
         </article>
-        <article class="principle-card principle-card-accent reveal">
-          <span>03</span><h3>Make local powerful</h3>
-          <p>When a backend is not essential, on-device storage keeps products fast, available, and easier to trust.</p>
+        <article class="principle-card card-peach reveal">
+          <span class="card-number">03</span><div class="card-symbol" aria-hidden="true">↗</div>
+          <h3>Make local powerful</h3><p>When a backend is not essential, on-device storage keeps products fast, available, and easier to trust.</p>
         </article>
       </div>
     </section>
 
     <section class="privacy-callout reveal" aria-labelledby="privacy-title">
-      <div>
+      <div class="privacy-orb" aria-hidden="true"></div>
+      <div class="privacy-copy">
         <p class="eyebrow">Plain-language privacy</p>
-        <h2 id="privacy-title">Trust should be readable.</h2>
-      </div>
-      <div>
+        <h2 id="privacy-title">Trust should<br><em>be readable.</em></h2>
         <p>See exactly what Ostinova processes, why it is needed, and the choices available to you.</p>
-        <a class="button button-light" href="apps/ostinova/privacy.html">Read Ostinova’s privacy policy <span aria-hidden="true">→</span></a>
+        <a class="button button-dark" href="apps/ostinova/privacy.html">Read the privacy policy <span aria-hidden="true">→</span></a>
       </div>
     </section>
   </main>
 
   <footer>
-    <div class="footer-brand">
-      <a class="wordmark" href="#top"><span class="wordmark-glyph" aria-hidden="true">M</span><span>Martinez Studio</span></a>
-      <p>Independent apps for focused work.</p>
-    </div>
-    <div class="footer-links">
-      <a href="apps/ostinova/">Ostinova</a>
-      <a href="apps/ostinova/privacy.html">Ostinova privacy</a>
-      <a href="privacy.html">Website privacy</a>
-      <a href="https://omar-martinez-dev.github.io">Developer portfolio</a>
-    </div>
+    <div class="footer-top"><a class="wordmark" href="#top"><span class="wordmark-glyph" aria-hidden="true">M</span><span>Martinez Studio</span></a><p>Independent apps for focused work.</p></div>
+    <p class="footer-statement">Small studio.<br><em>Serious care.</em></p>
+    <div class="footer-links"><a href="apps/ostinova/">Ostinova</a><a href="apps/ostinova/privacy.html">Ostinova privacy</a><a href="privacy.html">Website privacy</a><a href="https://omar-martinez-dev.github.io">Developer portfolio ↗</a></div>
     <p class="copyright">© <span data-year>2026</span> Martinez Studio</p>
   </footer>
 </body>

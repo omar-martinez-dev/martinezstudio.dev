@@ -23,17 +23,14 @@ const renderApps = apps => {
     <article class="app-feature reveal">
       <div class="app-copy">
         <div class="app-meta">
-          <img src="${escapeHTML(app.icon)}" alt="" width="58" height="58">
-          <div>
-            <p class="eyebrow">${escapeHTML(app.eyebrow)}</p>
-            <p>${escapeHTML(app.status)}</p>
-          </div>
+          <img src="${escapeHTML(app.icon)}" alt="" width="56" height="56">
+          <div><p class="eyebrow">${escapeHTML(app.eyebrow)}</p><p>${escapeHTML(app.status)}</p></div>
         </div>
         <h3>${escapeHTML(app.name)}</h3>
         <p class="app-tagline">${escapeHTML(app.tagline)}</p>
         <p class="app-description">${escapeHTML(app.description)}</p>
         <div class="app-actions">
-          <a class="button button-dark" href="${escapeHTML(app.url)}">Explore the product <span aria-hidden="true">→</span></a>
+          <a class="button button-light" href="${escapeHTML(app.url)}">Explore the product <span aria-hidden="true">→</span></a>
           <a class="text-link" href="${escapeHTML(app.privacy)}">Privacy policy</a>
           <a class="text-link" href="${escapeHTML(app.caseStudy)}">Case study ↗</a>
         </div>
@@ -47,27 +44,17 @@ const renderApps = apps => {
   observeReveals();
 };
 
-fetch("data/apps.json")
-  .then(response => {
-    if (!response.ok) throw new Error("Unable to load app catalog");
-    return response.json();
-  })
-  .then(renderApps)
-  .catch(() => {
-    appList.innerHTML = '<p>The app catalog is temporarily unavailable. <a href="apps/ostinova/">Explore Ostinova directly.</a></p>';
-  });
+if (appList) {
+  fetch("data/apps.json")
+    .then(response => { if (!response.ok) throw new Error("Unable to load app catalog"); return response.json(); })
+    .then(renderApps)
+    .catch(() => { appList.innerHTML = '<p>The app catalog is temporarily unavailable. <a href="apps/ostinova/">Explore Ostinova directly.</a></p>'; });
+}
 
 observeReveals();
-
 const updateHeader = () => header?.classList.toggle("is-scrolled", window.scrollY > 18);
 updateHeader();
 window.addEventListener("scroll", updateHeader, { passive: true });
-
-document.querySelectorAll("[data-year]").forEach(element => {
-  element.textContent = new Date().getFullYear();
-});
-
-if (reduceMotion.matches) {
-  document.querySelectorAll(".reveal").forEach(element => element.classList.add("is-visible"));
-}
+document.querySelectorAll("[data-year]").forEach(element => { element.textContent = new Date().getFullYear(); });
+if (reduceMotion.matches) document.querySelectorAll(".reveal").forEach(element => element.classList.add("is-visible"));
 
