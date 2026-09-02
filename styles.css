@@ -138,7 +138,8 @@ footer .wordmark-glyph { background: var(--white); color: var(--ink); }
 .feature-card p { max-width: 480px; margin-bottom: 0; color: rgba(20,20,22,.65); font-size: 15px; line-height: 1.6; }
 .feature-visual { position: relative; flex: 1; display: grid; place-items: center; min-height: 420px; }
 .feature-visual::before { content: ""; position: absolute; width: 74%; aspect-ratio: 1; border: 1px solid rgba(20,20,22,.22); border-radius: 50%; box-shadow: 0 0 0 65px rgba(20,20,22,.04); }
-.feature-visual img { position: relative; z-index: 2; width: min(250px, 63%); border: 6px solid #08090c; border-radius: 37px; box-shadow: 0 28px 60px rgba(20,20,22,.25); transform: rotate(-3deg); }
+.feature-device { position: relative; z-index: 2; width: min(250px, 63%); overflow: hidden; padding: 7px; border-radius: 39px; background: #08090c; box-shadow: 0 28px 60px rgba(20,20,22,.25); transform: rotate(-3deg); }
+.feature-device img { width: 100%; border-radius: 32px; }
 .product-privacy { margin-bottom: 20px; }
 
 .content-page { width: min(760px, calc(100% - 44px)); margin: 0 auto; padding: 150px 0 100px; }
