@@ -1,0 +1,411 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ostinova Privacy Policy — Martinez Studio</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #111;
+      --rule: #d9dde3;
+      --paper: #fff;
+      --canvas: #f6f7f9;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { background: var(--canvas); }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--canvas);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 12px;
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    .policy-shell {
+      width: min(100% - 32px, 520px);
+      margin: 40px auto;
+      padding: 58px 46px 42px;
+      background: var(--paper);
+      border: 1px solid var(--rule);
+    }
+
+    .policy-nav {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 14px 22px;
+      border-bottom: 1px solid var(--rule);
+      background: rgba(255, 255, 255, .92);
+      backdrop-filter: blur(14px);
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .policy-nav a { text-decoration: none; }
+
+    h1,
+    h2 {
+      margin: 0;
+      font-weight: 700;
+      line-height: 1.3;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin-bottom: 8px;
+      font-size: 20px;
+      letter-spacing: -0.2px;
+    }
+
+    h2 {
+      margin: 30px 0 14px;
+      font-size: 14px;
+      letter-spacing: 0;
+    }
+
+    .updated {
+      margin: 0 0 38px;
+      font-size: 11px;
+      font-weight: 700;
+    }
+
+    p {
+      margin: 0 0 14px;
+    }
+
+    .summary {
+      margin-bottom: 18px;
+      font-style: italic;
+    }
+
+    .summary strong { font-style: italic; }
+
+    .key-intro {
+      margin-bottom: 20px;
+      font-weight: 700;
+      font-style: italic;
+    }
+
+    .bullet {
+      position: relative;
+      margin-left: 18px;
+    }
+
+    .bullet::before {
+      content: "•";
+      position: absolute;
+      left: -15px;
+      font-weight: 700;
+    }
+
+    .text-list {
+      margin: -2px 0 18px;
+      padding-left: 22px;
+    }
+
+    .text-list li {
+      margin: 0 0 10px;
+      padding-left: 2px;
+    }
+
+    .toc-list {
+      margin: 0 0 24px;
+      padding-left: 24px;
+    }
+
+    .toc-list li {
+      margin: 0 0 7px;
+      padding-left: 4px;
+      line-height: 1.4;
+      font-weight: 700;
+    }
+
+    .toc-list li::marker { font-weight: 700; }
+
+    a,
+    a:visited {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    strong { font-weight: 700; }
+
+    .subheading {
+      margin-top: 20px;
+      margin-bottom: 9px;
+      font-weight: 700;
+    }
+
+    .data-table-wrap {
+      width: 100%;
+      margin: 16px 0 20px;
+      overflow-x: auto;
+      border: 1px solid var(--rule);
+    }
+
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 10.5px;
+      line-height: 1.4;
+    }
+
+    .data-table th,
+    .data-table td {
+      padding: 8px 9px;
+      border-bottom: 1px solid var(--rule);
+      text-align: left;
+      vertical-align: top;
+    }
+
+    .data-table th { background: #f3f4f6; font-weight: 700; }
+    .data-table tr:last-child td { border-bottom: 0; }
+    .data-table td:first-child { width: 31%; font-weight: 700; }
+    .data-table td:last-child { width: 12%; text-align: center; font-weight: 700; }
+
+    .policy-footer {
+      margin-top: 28px;
+      padding-top: 14px;
+      border-top: 1px solid var(--rule);
+      font-size: 10px;
+    }
+
+    .load-error {
+      padding: 12px;
+      border: 1px solid #b42318;
+      color: #b42318;
+      background: #fff5f4;
+    }
+
+    @media (max-width: 620px) {
+      .policy-shell {
+        width: 100%;
+        margin: 0;
+        padding: 42px 24px;
+        border: 0;
+      }
+    }
+
+    @page {
+      size: Letter;
+      margin: 0.5in 0;
+    }
+
+    @media print {
+      html,
+      body { background: #fff; }
+
+      body {
+        font-size: 9.5px;
+        line-height: 1.5;
+      }
+
+      .policy-shell {
+        width: 3.9in;
+        margin: 0 auto;
+        padding: 0 0 0.25in;
+        border: 0;
+      }
+
+      h1 { font-size: 16px; }
+      h2 { margin-top: 24px; font-size: 12px; }
+      .updated { margin-bottom: 30px; font-size: 8px; }
+      p { margin-bottom: 11px; }
+      .data-table { font-size: 7.5px; }
+      .data-table th, .data-table td { padding: 5px 6px; }
+      .data-table-wrap { overflow: visible; }
+      h1, h2, .summary { break-after: avoid; }
+      p, li { orphans: 3; widows: 3; }
+      a { color: #000 !important; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="policy-nav" aria-label="Policy navigation"><a href="./">← Ostinova</a><a href="../../">Martinez Studio</a></nav>
+  <main class="policy-shell" id="policy" aria-live="polite"></main>
+
+  <script>
+    const policy = document.querySelector('#policy');
+
+    function escapeHtml(value) {
+      return value.replace(/[&<>"']/g, character => ({
+        '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#039;'
+      })[character]);
+    }
+
+    function addInlineEmphasis(text) {
+      const safe = escapeHtml(text);
+      return safe
+        .replace(/^(In Short:)/, '<strong>$1</strong>')
+        .replace(/^(Questions or concerns\?)/, '<strong>$1</strong>')
+        .replace(/^(What personal information do we process\?)/, '<strong>$1</strong>')
+        .replace(/^(Do we process any sensitive personal information\?)/, '<strong>$1</strong>')
+        .replace(/^(Do we collect any information from third parties\?)/, '<strong>$1</strong>')
+        .replace(/^(How do we process your information\?)/, '<strong>$1</strong>')
+        .replace(/^(How do we keep your information safe\?)/, '<strong>$1</strong>')
+        .replace(/^(What are your rights\?)/, '<strong>$1</strong>')
+        .replace(/^(How do you exercise your rights\?)/, '<strong>$1</strong>')
+        .replace(/^(Sensitive Information\.|Payment Data\.|Application Data\.|Mobile Device Data\.|Log and Usage Data\.|Device Data\.|Location Data\.|Business Transfers\.)/, '<strong>$1</strong>');
+    }
+
+    function normalizeText(text) {
+      return text
+        .replace(/\(\"\s+/g, '("')
+        .replace(/\s+\"\)/g, '")')
+        .replace(/\"process\s+\"/g, '"process"')
+        .replace(/\s+([,.;:?!])/g, '$1');
+    }
+
+    function buildDataTable() {
+      const rows = [
+        ['A. Identifiers', 'Contact details, including name, postal address, telephone number, online identifier, IP address, email address, and account name', 'YES'],
+        ['B. California Customer Records information', 'Name, contact information, education, employment history, and financial information', 'NO'],
+        ['C. Protected classifications', 'Gender, age, date of birth, race and ethnicity, national origin, marital status, and other demographic data', 'NO'],
+        ['D. Commercial information', 'Transaction information, purchase history, financial details, and payment information', 'YES'],
+        ['E. Biometric information', 'Fingerprints and voiceprints', 'NO'],
+        ['F. Internet or network activity', 'Browsing and search history, online behavior, interest data, and interactions with websites, applications, systems, and advertisements', 'YES'],
+        ['G. Geolocation data', 'Device location', 'YES'],
+        ['H. Audio, electronic, or sensory information', 'Images and audio, video, or call recordings created in connection with business activities', 'YES'],
+        ['I. Professional or employment information', 'Business contact details, job title, work history, and professional qualifications', 'NO'],
+        ['J. Education information', 'Student records and directory information', 'NO'],
+        ['K. Inferences', 'Inferences used to create a profile or summary of preferences and characteristics', 'YES'],
+        ['L. Sensitive personal information', '', 'NO']
+      ];
+      const wrap = document.createElement('div');
+      wrap.className = 'data-table-wrap';
+      wrap.innerHTML = `<table class="data-table"><thead><tr><th>Category</th><th>Examples</th><th>Collected</th></tr></thead><tbody>${rows.map(row => `<tr>${row.map(cell => `<td>${escapeHtml(cell)}</td>`).join('')}</tr>`).join('')}</tbody></table>`;
+      return wrap;
+    }
+
+    function buildTableOfContents(lines) {
+      const items = [];
+      lines.forEach(line => {
+        const match = line.match(/^(\d+)\.\s*(.*)$/);
+        if (match) {
+          items.push(match[2]);
+        } else if (items.length) {
+          items[items.length - 1] += ` ${line}`;
+        }
+      });
+
+      const list = document.createElement('ol');
+      list.className = 'toc-list';
+      items.forEach(item => {
+        const listItem = document.createElement('li');
+        listItem.textContent = item;
+        list.appendChild(listItem);
+      });
+      return list;
+    }
+
+    function renderPolicy(source) {
+      const blocks = source
+        .replace(/\r/g, '')
+        .split(/\n\s*\n/)
+        .map(block => block.split('\n').map(line => line.trim()).filter(Boolean))
+        .filter(block => block.length);
+
+      const fragment = document.createDocumentFragment();
+      let inTableOfContents = false;
+      let tableOfContentsRendered = false;
+      let skippingExtractedTable = false;
+
+      const bulletStarts = /^(Download and use|Engage with us|Log and Usage Data\.|Device Data\.|Location Data\.|To respond to user inquiries|To request feedback|To deliver targeted advertising|To evaluate and improve|To identify usage trends|Receiving help through|Participation in customer|Facilitation in the delivery|Category [ADFGHK] -|Right to )/;
+      const subheadingStarts = /^(Personal information you disclose to us|Information automatically collected|Categories of Personal Information We Collect|Sources of Personal Information|How We Use and Share Personal Information|Will your information be shared with anyone else\?|Your Rights|How to Exercise Your Rights|Request Verification|Appeals)$/;
+
+      blocks.forEach((lines, index) => {
+        const text = normalizeText(lines.join(' ').replace(/\s+/g, ' ').trim());
+        let element;
+
+        if (/^CategoryExamplesCollected/.test(text)) {
+          fragment.appendChild(buildDataTable());
+          skippingExtractedTable = true;
+          return;
+        }
+        if (skippingExtractedTable) {
+          if (!/^We may also collect other personal information/.test(text)) return;
+          skippingExtractedTable = false;
+        }
+
+        if (inTableOfContents && !tableOfContentsRendered && /^1\.\s/.test(lines[0])) {
+          fragment.appendChild(buildTableOfContents(lines));
+          tableOfContentsRendered = true;
+          return;
+        }
+
+        if (inTableOfContents && tableOfContentsRendered && /^1\.\s/.test(lines[0])) {
+          inTableOfContents = false;
+        }
+
+        if (index === 0 && text === 'PRIVACY POLICY') {
+          element = document.createElement('h1');
+          element.textContent = text;
+        } else if (/^Last updated\b/i.test(text)) {
+          element = document.createElement('p');
+          element.className = 'updated';
+          element.textContent = text;
+        } else if (text === 'TABLE OF CONTENTS') {
+          inTableOfContents = true;
+          element = document.createElement('h2');
+          element.textContent = text;
+        } else if (/^\d+\.\s+[A-Z]/.test(text) || /^[A-Z][A-Z\s-?]+$/.test(text)) {
+          if (/^1\. WHAT INFORMATION DO WE COLLECT\?/.test(text)) {
+            inTableOfContents = false;
+          }
+          element = document.createElement(inTableOfContents ? 'p' : 'h2');
+          element.textContent = text;
+          if (inTableOfContents) element.className = 'toc-item';
+        } else if (/^In Short:/.test(text)) {
+          element = document.createElement('p');
+          element.className = 'summary';
+          element.innerHTML = addInlineEmphasis(text);
+        } else if (/^This summary provides key points/.test(text)) {
+          element = document.createElement('p');
+          element.className = 'key-intro';
+          element.textContent = text;
+        } else if (subheadingStarts.test(text)) {
+          element = document.createElement('p');
+          element.className = 'subheading';
+          element.textContent = text;
+        } else if (bulletStarts.test(text)) {
+          element = document.createElement('p');
+          element.className = 'bullet';
+          element.innerHTML = addInlineEmphasis(text);
+        } else {
+          element = document.createElement('p');
+          element.innerHTML = addInlineEmphasis(text);
+        }
+
+        fragment.appendChild(element);
+      });
+
+      const footer = document.createElement('footer');
+      footer.className = 'policy-footer';
+      footer.textContent = 'Privacy Policy';
+      fragment.appendChild(footer);
+      policy.replaceChildren(fragment);
+    }
+
+    fetch('./privacy-policy.txt')
+      .then(response => {
+        if (!response.ok) throw new Error(`Unable to load policy (${response.status})`);
+        return response.text();
+      })
+      .then(renderPolicy)
+      .catch(error => {
+        policy.innerHTML = `<p class="load-error"><strong>Policy could not be loaded.</strong><br>${escapeHtml(error.message)}. Serve this folder from a local web server instead of opening the HTML file directly.</p>`;
+      });
+  </script>
+</body>
+</html>
+

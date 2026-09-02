@@ -3,102 +3,122 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Martinez Studio builds focused apps that respect attention, privacy, and the work users came to do.">
-  <meta name="theme-color" content="#0b0c10">
-  <meta property="og:title" content="Martinez Studio — Focused apps, thoughtfully built">
+  <meta name="description" content="Martinez Studio makes focused, privacy-conscious apps for creative practice.">
+  <meta name="theme-color" content="#f2efe7">
+  <meta property="og:title" content="Martinez Studio — Useful software, quietly ambitious">
   <meta property="og:description" content="Independent apps for creative practice and everyday focus.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://martinezstudio.dev/">
-  <title>Martinez Studio — Focused apps, thoughtfully built</title>
+  <title>Martinez Studio — Useful software, quietly ambitious</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css">
   <script src="script.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
-  <header class="studio-header" data-header>
-    <a class="studio-mark" href="#top" aria-label="Martinez Studio, home">
-      <span class="mark-symbol" aria-hidden="true">M</span>
+
+  <header class="site-header" data-header>
+    <a class="wordmark" href="#top" aria-label="Martinez Studio, home">
+      <span class="wordmark-glyph" aria-hidden="true">M</span>
       <span>Martinez Studio</span>
     </a>
     <nav aria-label="Primary navigation">
-      <a href="#apps">Apps</a>
+      <a href="#work">Work</a>
       <a href="#principles">Principles</a>
-      <a href="https://github.com/omar-martinez-dev">GitHub</a>
+      <a href="apps/ostinova/privacy.html">Privacy</a>
+      <a class="nav-cta" href="https://github.com/omar-martinez-dev">GitHub <span aria-hidden="true">↗</span></a>
     </nav>
   </header>
 
   <main id="main">
-    <section class="studio-hero" id="top" aria-labelledby="hero-title">
-      <div class="hero-noise" aria-hidden="true"></div>
+    <section class="hero" id="top">
       <div class="hero-copy">
-        <p class="kicker enter">Independent software studio</p>
-        <h1 id="hero-title" class="enter delay-1">Focused apps.<br><em>Thoughtfully built.</em></h1>
-        <p class="hero-summary enter delay-2">Tools that protect attention, explain their choices, and stay out of the way when the real work begins.</p>
-        <a class="round-link enter delay-3" href="#apps">View current apps <span aria-hidden="true">↓</span></a>
+        <p class="eyebrow enter">Independent software studio · California</p>
+        <h1 class="enter delay-1">Useful software,<br><em>quietly ambitious.</em></h1>
+        <p class="hero-dek enter delay-2">We build focused tools for people who care about craft. Clear choices, local-first thinking, and no attention traps.</p>
+        <div class="hero-actions enter delay-3">
+          <a class="button button-dark" href="#work">Explore the work <span aria-hidden="true">↓</span></a>
+          <p><strong>01</strong> product in active development</p>
+        </div>
       </div>
 
-      <div class="hero-product enter delay-2" data-depth>
-        <div class="sun" aria-hidden="true"></div>
-        <figure class="device device-primary">
+      <div class="hero-stage enter delay-2" aria-label="Ostinova app preview">
+        <div class="stage-orbit" aria-hidden="true"></div>
+        <p class="stage-note stage-note-top">Designed for the<br>practice room</p>
+        <figure class="phone phone-main">
           <img src="assets/screenshots/ostinova-metronome.jpg" alt="Ostinova metronome interface">
         </figure>
-        <img class="floating-icon" src="assets/ostinova-icon.png" alt="Ostinova app icon" width="116" height="116">
-        <p class="hero-caption">First from the studio<br><strong>Ostinova</strong></p>
+        <figure class="phone phone-secondary" aria-hidden="true">
+          <img src="assets/screenshots/ostinova-practice.jpg" alt="">
+        </figure>
+        <div class="stage-badge">
+          <img src="assets/ostinova-icon.png" alt="" width="52" height="52">
+          <span>Ostinova<br><strong>In development</strong></span>
+        </div>
       </div>
     </section>
 
-    <section class="manifesto" aria-label="Studio promise">
-      <p class="reveal">Software should feel clear before it feels clever.</p>
+    <section class="ticker" aria-label="Studio characteristics">
+      <div>
+        <span>Local-first</span><i aria-hidden="true">✦</i>
+        <span>Privacy-conscious</span><i aria-hidden="true">✦</i>
+        <span>Purpose-built</span><i aria-hidden="true">✦</i>
+        <span>Human scale</span><i aria-hidden="true">✦</i>
+      </div>
     </section>
 
-    <section class="apps-section" id="apps" aria-labelledby="apps-title">
-      <div class="section-intro reveal">
-        <p class="kicker">Current catalog</p>
-        <h2 id="apps-title">Built around the work,<br>not the screen time.</h2>
+    <section class="work" id="work" aria-labelledby="work-title">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Current work</p>
+        <h2 id="work-title">One product.<br>Every detail considered.</h2>
+        <p>We would rather make one coherent tool than a suite of half-finished ideas.</p>
       </div>
       <div id="app-list" class="app-list" aria-live="polite"></div>
-      <noscript>
-        <p>JavaScript is required to load the current app catalog. Visit the <a href="apps/ostinova/">Ostinova product page</a>.</p>
-      </noscript>
+      <noscript><p>Visit the <a href="apps/ostinova/">Ostinova product page</a>.</p></noscript>
     </section>
 
-    <section class="principles-section" id="principles" aria-labelledby="principles-title">
-      <div class="section-intro reveal">
-        <p class="kicker">Studio principles</p>
-        <h2 id="principles-title">A small set of standards,<br>applied all the way through.</h2>
+    <section class="principles" id="principles" aria-labelledby="principles-title">
+      <div class="principles-intro reveal">
+        <p class="eyebrow">How we work</p>
+        <h2 id="principles-title">Calm by design.</h2>
+        <p>Restraint is not a lack of ambition. It is how the important things get enough room.</p>
       </div>
-      <div class="principle-list">
-        <article class="reveal">
-          <p class="index">01</p>
-          <h3>Attention is finite.</h3>
-          <p>Primary workflows stay calm, direct, and free of interruptions that compete with the user’s goal.</p>
+      <div class="principle-grid">
+        <article class="principle-card reveal">
+          <span>01</span><h3>Respect attention</h3>
+          <p>Primary workflows stay direct and free from interruptions that compete with the user’s goal.</p>
         </article>
-        <article class="reveal">
-          <p class="index">02</p>
-          <h3>Privacy is interface design.</h3>
-          <p>System permissions and business models are explained in product language before a decision is requested.</p>
+        <article class="principle-card reveal">
+          <span>02</span><h3>Explain the choice</h3>
+          <p>Permissions, privacy, and business decisions are expressed in product language before action is requested.</p>
         </article>
-        <article class="reveal">
-          <p class="index">03</p>
-          <h3>Local is a feature.</h3>
+        <article class="principle-card principle-card-accent reveal">
+          <span>03</span><h3>Make local powerful</h3>
           <p>When a backend is not essential, on-device storage keeps products fast, available, and easier to trust.</p>
         </article>
       </div>
     </section>
 
-    <section class="future-section reveal" aria-labelledby="future-title">
-      <p class="kicker">What comes next</p>
-      <h2 id="future-title">This catalog is designed to grow without losing its point of view.</h2>
-      <p>New products will appear here as they become ready to use—not before.</p>
-      <a class="round-link round-link-dark" href="https://github.com/omar-martinez-dev">Follow the work on GitHub <span aria-hidden="true">↗</span></a>
+    <section class="privacy-callout reveal" aria-labelledby="privacy-title">
+      <div>
+        <p class="eyebrow">Plain-language privacy</p>
+        <h2 id="privacy-title">Trust should be readable.</h2>
+      </div>
+      <div>
+        <p>See exactly what Ostinova processes, why it is needed, and the choices available to you.</p>
+        <a class="button button-light" href="apps/ostinova/privacy.html">Read Ostinova’s privacy policy <span aria-hidden="true">→</span></a>
+      </div>
     </section>
   </main>
 
   <footer>
-    <a class="studio-mark" href="#top"><span class="mark-symbol" aria-hidden="true">M</span><span>Martinez Studio</span></a>
-    <p>Independent apps for focused work.</p>
+    <div class="footer-brand">
+      <a class="wordmark" href="#top"><span class="wordmark-glyph" aria-hidden="true">M</span><span>Martinez Studio</span></a>
+      <p>Independent apps for focused work.</p>
+    </div>
     <div class="footer-links">
+      <a href="apps/ostinova/">Ostinova</a>
+      <a href="apps/ostinova/privacy.html">Ostinova privacy</a>
       <a href="privacy.html">Website privacy</a>
       <a href="https://omar-martinez-dev.github.io">Developer portfolio</a>
     </div>
@@ -106,3 +126,4 @@
   </footer>
 </body>
 </html>
+
