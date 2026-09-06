@@ -36,7 +36,7 @@ const renderApps = apps => {
         </div>
       </div>
       <a class="app-visual" href="${escapeHTML(app.url)}" aria-label="Explore ${escapeHTML(app.name)}">
-        <img src="${escapeHTML(app.image)}" alt="${escapeHTML(app.name)} practice interface">
+        <span class="app-device"><img src="${escapeHTML(app.image)}" alt="${escapeHTML(app.name)} practice interface"></span>
         <span class="app-visual-label" aria-hidden="true">Product 001 · View →</span>
       </a>
     </article>
