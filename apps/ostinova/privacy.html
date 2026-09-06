@@ -65,7 +65,7 @@
     .policy-shell > p:not(.summary):not(.key-intro):not(.subheading):not(.bullet) { max-width: 690px; }
     .policy-shell strong { color: var(--ink); font-weight: 760; }
     .policy-shell h2 { margin: 76px 0 22px; padding-top: 24px; border-top: 1px solid var(--rule); font-size: clamp(25px, 3.5vw, 34px); font-weight: 680; letter-spacing: -.045em; line-height: 1.12; scroll-margin-top: 100px; }
-    .policy-shell h2::first-letter { color: var(--orange); }
+    .policy-shell h2 .section-number { color: var(--orange); }
     .policy-shell h2.summary-heading { margin-top: 48px; padding: 0; border: 0; font: 400 clamp(34px, 5vw, 50px)/1 Georgia, "Times New Roman", serif; text-transform: none; }
     .policy-shell h2.contents-heading { margin: 64px 0 18px; padding: 0; border: 0; font-size: 11px; letter-spacing: .15em; text-transform: uppercase; }
     .summary { margin: 0 0 12px !important; padding: 19px 21px; border-left: 3px solid var(--orange); border-radius: 0 15px 15px 0; background: var(--orange-soft); color: #4f4b45 !important; font-size: 14px; line-height: 1.62; }
@@ -308,10 +308,18 @@
         } else if (/^\d+\.\s+[A-Z]/.test(text) || /^[A-Z][A-Z\s-?]+$/.test(text)) {
           if (/^1\. WHAT INFORMATION DO WE COLLECT\?/.test(text)) inTableOfContents = false;
           element = document.createElement(inTableOfContents ? 'p' : 'h2');
-          element.textContent = text;
+          const numberedHeading = !inTableOfContents && text.match(/^(\d+\.)\s+(.+)$/);
+          if (numberedHeading) {
+            const number = document.createElement('span');
+            number.className = 'section-number';
+            number.textContent = numberedHeading[1];
+            element.append(number, ` ${numberedHeading[2]}`);
+          } else {
+            element.textContent = text;
+          }
           if (inTableOfContents) {
             element.className = 'toc-item';
-          } else if (/^\d+\.\s+/.test(text)) {
+          } else if (numberedHeading) {
             sectionIndex += 1;
             element.id = `section-${sectionIndex}`;
           } else if (text === 'SUMMARY OF KEY POINTS') {
