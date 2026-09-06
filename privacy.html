@@ -24,10 +24,10 @@
 
     .policy-layout { width: min(calc(100% - 40px), var(--max)); display: grid; grid-template-columns: 220px minmax(0, 720px) minmax(160px, 1fr); gap: clamp(28px, 3.2vw, 44px); align-items: start; margin: 0 auto; padding: 52px 0 110px; }
     .policy-sidebar { position: sticky; top: 108px; min-width: 0; }
-    .sidebar-site { display: flex; align-items: center; gap: 12px; margin-bottom: 30px; }
-    .sidebar-mark { width: 42px; height: 42px; display: grid; place-items: center; border-radius: 11px; background: var(--orange); font: italic 700 18px Georgia, serif; }
-    .sidebar-site strong { display: block; font-size: 14px; line-height: 1.35; }
-    .sidebar-site span { display: block; color: var(--muted); font-size: 12px; }
+    .sidebar-site { margin-bottom: 30px; padding: 3px 0 3px 14px; border-left: 3px solid var(--orange); }
+    .sidebar-site .sidebar-context { display: block; margin-bottom: 5px; color: #d96619; font: 750 12px/1.3 ui-monospace, SFMono-Regular, Consolas, monospace; letter-spacing: .09em; text-transform: uppercase; }
+    .sidebar-site strong { display: block; font-size: 14px; letter-spacing: -.015em; line-height: 1.35; }
+    .sidebar-site .sidebar-description { display: block; color: var(--muted); font-size: 12px; }
     .sidebar-label { margin: 0 0 12px; color: var(--muted); font-size: 12px; font-weight: 800; letter-spacing: .13em; text-transform: uppercase; }
     .sidebar-toc { max-height: calc(100vh - 245px); overflow-y: auto; padding-right: 12px; scrollbar-width: thin; }
     .sidebar-toc ol { margin: 0; padding: 0; list-style: none; }
@@ -54,7 +54,7 @@
     .policy-shell section ul { display: grid; gap: 14px; margin: 24px 0; padding-left: 25px; }
     .policy-shell strong { color: var(--ink); font-weight: 760; }
     .policy-shell h2 { margin: 76px 0 22px; padding-top: 24px; border-top: 1px solid var(--rule); font-size: clamp(25px, 3.5vw, 34px); font-weight: 680; letter-spacing: -.045em; line-height: 1.12; }
-    .policy-shell h2::first-letter { color: #d96619; }
+    .policy-shell section h2 .section-number { color: #d96619; }
     .policy-shell h2.summary-heading { margin-top: 48px; padding: 0; border: 0; font: 400 clamp(34px, 5vw, 50px)/1 Georgia, "Times New Roman", serif; }
     .policy-shell h2.contents-heading { margin: 64px 0 18px; padding: 0; border: 0; font-size: 12px; letter-spacing: .15em; text-transform: uppercase; }
     .summary { margin: 0 0 12px; padding: 19px 21px; border-left: 3px solid var(--orange); border-radius: 0 15px 15px 0; background: var(--orange-soft); color: #4f4b45; font-size: 15px; line-height: 1.62; }
@@ -88,7 +88,7 @@
 
   <div class="policy-layout">
     <aside class="policy-sidebar" aria-label="Policy sections">
-      <div class="sidebar-site"><span class="sidebar-mark" aria-hidden="true">M</span><div><strong>martinezstudio.dev</strong><span>Website privacy</span></div></div>
+      <div class="sidebar-site"><span class="sidebar-context">Website · 01</span><strong>martinezstudio.dev</strong><span class="sidebar-description">Privacy policy</span></div>
       <p class="sidebar-label">On this page</p>
       <nav class="sidebar-toc" aria-label="Table of contents">
         <ol>
@@ -122,14 +122,14 @@
         <li><a href="#changes"><span class="toc-number">08</span><span>Changes and contact</span></a></li>
       </ol>
 
-      <section id="scope"><h2>1. Scope</h2><p>This policy applies to the Martinez Studio website at martinezstudio.dev. Ostinova is covered by its separate <a href="apps/ostinova/privacy.html">app privacy policy</a>.</p></section>
-      <section id="information"><h2>2. Information we handle</h2><p>The website does not provide user accounts, purchases, comment forms, or newsletter sign-ups. Martinez Studio does not add first-party analytics or advertising trackers to the website.</p><ul><li><strong>Technical request data.</strong> Like most websites, the server or hosting provider may process an IP address, browser and device details, requested pages, timestamps, and similar logs needed to deliver, maintain, and secure the site.</li><li><strong>Support communications.</strong> If you email support, Martinez Studio receives your email address, message, and anything else you choose to include.</li></ul></section>
-      <section id="use"><h2>3. How information is used</h2><p>Technical request data may be used to operate, troubleshoot, and protect the website. Support communications are used to answer your request, investigate issues, and keep an appropriate record of the conversation.</p></section>
-      <section id="tracking"><h2>4. Cookies and tracking</h2><p>Martinez Studio does not use cookies, local storage, session storage, cross-site tracking, or targeted advertising on this website. Because the site does not track visitors across websites, it does not respond differently to browser “Do Not Track” signals.</p></section>
-      <section id="sharing"><h2>5. Sharing and external links</h2><p>Martinez Studio does not sell personal information or share it for targeted advertising. Information may be handled by service providers that host or secure the website and email service, or disclosed when required by law or necessary to protect rights, safety, and the integrity of the service.</p><p>The website links to third-party services such as GitHub. Their privacy practices apply after you follow those links.</p></section>
-      <section id="retention"><h2>6. Retention and security</h2><p>Support communications are kept only as long as reasonably needed to respond, maintain relevant records, and meet legal obligations. Technical logs are retained according to the operational practices of the hosting provider. Reasonable safeguards are used, but no internet transmission or storage system can be guaranteed completely secure.</p></section>
-      <section id="choices"><h2>7. Your choices</h2><p>You may ask to access, correct, or delete personal information Martinez Studio holds about you, subject to applicable law. Send requests to <a href="mailto:support@martinezstudio.dev">support@martinezstudio.dev</a>. Martinez Studio may need enough information to understand and verify a request.</p></section>
-      <section id="changes"><h2>8. Changes and contact</h2><p>This policy may be updated when the website or its practices change. The date above identifies the latest version. Questions about this policy can be sent to <a href="mailto:support@martinezstudio.dev">support@martinezstudio.dev</a>.</p></section>
+      <section id="scope"><h2><span class="section-number">1.</span> Scope</h2><p>This policy applies to the Martinez Studio website at martinezstudio.dev. Ostinova is covered by its separate <a href="apps/ostinova/privacy.html">app privacy policy</a>.</p></section>
+      <section id="information"><h2><span class="section-number">2.</span> Information we handle</h2><p>The website does not provide user accounts, purchases, comment forms, or newsletter sign-ups. Martinez Studio does not add first-party analytics or advertising trackers to the website.</p><ul><li><strong>Technical request data.</strong> Like most websites, the server or hosting provider may process an IP address, browser and device details, requested pages, timestamps, and similar logs needed to deliver, maintain, and secure the site.</li><li><strong>Support communications.</strong> If you email support, Martinez Studio receives your email address, message, and anything else you choose to include.</li></ul></section>
+      <section id="use"><h2><span class="section-number">3.</span> How information is used</h2><p>Technical request data may be used to operate, troubleshoot, and protect the website. Support communications are used to answer your request, investigate issues, and keep an appropriate record of the conversation.</p></section>
+      <section id="tracking"><h2><span class="section-number">4.</span> Cookies and tracking</h2><p>Martinez Studio does not use cookies, local storage, session storage, cross-site tracking, or targeted advertising on this website. Because the site does not track visitors across websites, it does not respond differently to browser “Do Not Track” signals.</p></section>
+      <section id="sharing"><h2><span class="section-number">5.</span> Sharing and external links</h2><p>Martinez Studio does not sell personal information or share it for targeted advertising. Information may be handled by service providers that host or secure the website and email service, or disclosed when required by law or necessary to protect rights, safety, and the integrity of the service.</p><p>The website links to third-party services such as GitHub. Their privacy practices apply after you follow those links.</p></section>
+      <section id="retention"><h2><span class="section-number">6.</span> Retention and security</h2><p>Support communications are kept only as long as reasonably needed to respond, maintain relevant records, and meet legal obligations. Technical logs are retained according to the operational practices of the hosting provider. Reasonable safeguards are used, but no internet transmission or storage system can be guaranteed completely secure.</p></section>
+      <section id="choices"><h2><span class="section-number">7.</span> Your choices</h2><p>You may ask to access, correct, or delete personal information Martinez Studio holds about you, subject to applicable law. Send requests to <a href="mailto:support@martinezstudio.dev">support@martinezstudio.dev</a>. Martinez Studio may need enough information to understand and verify a request.</p></section>
+      <section id="changes"><h2><span class="section-number">8.</span> Changes and contact</h2><p>This policy may be updated when the website or its practices change. The date above identifies the latest version. Questions about this policy can be sent to <a href="mailto:support@martinezstudio.dev">support@martinezstudio.dev</a>.</p></section>
       <footer class="policy-footer">Website Privacy Policy · Martinez Studio</footer>
     </main>
 
