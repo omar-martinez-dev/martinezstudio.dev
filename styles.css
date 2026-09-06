@@ -140,6 +140,7 @@ footer .wordmark-glyph { background: var(--white); color: var(--ink); }
 .feature-visual::before { content: ""; position: absolute; width: 74%; aspect-ratio: 1; border: 1px solid rgba(20,20,22,.22); border-radius: 50%; box-shadow: 0 0 0 65px rgba(20,20,22,.04); }
 .feature-device { position: relative; z-index: 2; width: min(250px, 63%); overflow: hidden; padding: 7px; border-radius: 39px; background: #08090c; box-shadow: 0 28px 60px rgba(20,20,22,.25); transform: rotate(-3deg); }
 .feature-device img { width: 100%; border-radius: 32px; }
+.feature-device.has-dynamic-island::after { content: ""; position: absolute; z-index: 3; top: calc(7px + 1.75%); left: 50%; width: 31.5%; aspect-ratio: 116 / 32; border-radius: 999px; background: #000; transform: translateX(-50%); pointer-events: none; }
 .feature-card:nth-child(even) .feature-device { transform: rotate(3deg); }
 .product-privacy { margin-bottom: 20px; }
 
