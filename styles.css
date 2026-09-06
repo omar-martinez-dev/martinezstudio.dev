@@ -129,8 +129,13 @@ footer .wordmark-glyph { background: var(--white); color: var(--ink); }
 .canvas-note { position: absolute; z-index: 5; margin: 0; color: rgba(255,255,255,.6); font: italic 17px/1.3 Georgia, serif; text-align: left; }
 .canvas-note-left { left: 28px; bottom: 28px; }.canvas-note-right { right: 28px; top: 28px; text-align: right; }
 .product-details { width: min(calc(100% - 40px), var(--max)); margin: 0 auto; padding: 84px 0 96px; }
-.feature-intro { max-width: 760px; margin-bottom: 70px; }
-.feature-intro > p:last-child { max-width: 520px; margin: 26px 0 0; color: var(--muted); font-size: 16px; line-height: 1.65; }
+.feature-intro { display: grid; grid-template-columns: minmax(0, 760px) minmax(290px, 1fr); gap: clamp(68px, 8vw, 120px); align-items: end; margin-bottom: 70px; }
+.feature-intro-copy > p:last-child { max-width: 520px; margin: 26px 0 0; color: var(--muted); font-size: 16px; line-height: 1.65; }
+.feature-index { margin: 0 0 8px; padding: 0; border-top: 1px solid var(--line); list-style: none; }
+.feature-index li { display: grid; grid-template-columns: 36px minmax(72px, 1fr) auto; gap: 18px; align-items: baseline; padding: 15px 0; border-bottom: 1px solid var(--line); }
+.feature-index-number { color: var(--orange-deep); font: 750 9px/1 ui-monospace, SFMono-Regular, Consolas, monospace; letter-spacing: .08em; }
+.feature-index-name { font-size: 14px; font-weight: 760; letter-spacing: -.02em; }
+.feature-index-note { color: var(--muted); font: italic 14px/1.2 Georgia, "Times New Roman", serif; }
 .feature-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
 .feature-card { min-height: 790px; display: flex; flex-direction: column; padding: 30px; border-radius: 26px; background: var(--white); border: 1px solid var(--line); }
 .feature-card:first-child { background: var(--orange); }
@@ -190,6 +195,12 @@ footer .wordmark-glyph { background: var(--white); color: var(--ink); }
   .principle-card { min-height: 330px; }
   .card-symbol { margin: 30px auto; }
   .feature-grid { grid-template-columns: 1fr; }
+  .feature-intro { grid-template-columns: 1fr; gap: 46px; }
+  .feature-index { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); margin-bottom: 0; }
+  .feature-index li:nth-child(odd) { padding-right: 22px; }
+  .feature-index li:nth-child(even) { padding-left: 22px; border-left: 1px solid var(--line); }
+  .feature-index li { grid-template-columns: 30px 1fr; }
+  .feature-index-note { display: none; }
   .feature-card, .feature-card:first-child { min-height: 720px; }
   .legal-layout { grid-template-columns: 1fr; }
   .legal-nav { position: static; }
@@ -230,6 +241,7 @@ footer .wordmark-glyph { background: var(--white); color: var(--ink); }
   .copyright { margin-top: 42px; }
   .canvas-note-right { display: none; }
   .feature-card, .feature-card:first-child { min-height: 680px; }
+  .feature-index { display: none; }
   .legal-page, .support-main { width: calc(100% - 24px); padding-top: 124px; }
   .legal-hero { padding-bottom: 44px; }
   .legal-layout { gap: 42px; padding-top: 42px; }
