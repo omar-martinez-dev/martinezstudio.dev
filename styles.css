@@ -101,11 +101,11 @@ h2 { margin: 0; font-size: clamp(47px, 6.7vw, 88px); font-weight: 650; letter-sp
 .principle-card p { margin: 0; color: rgba(20,20,22,.65); font-size: 14px; line-height: 1.55; }
 .card-mint { background: var(--mint); }.card-lilac { background: var(--lilac); }.card-peach { background: var(--peach); }
 
-.privacy-callout { position: relative; width: min(calc(100% - 40px), var(--max)); min-height: 590px; display: flex; align-items: center; margin: 0 auto 20px; overflow: hidden; border-radius: 34px; background: var(--sky); }
-.privacy-orb { position: absolute; right: -5%; width: min(620px, 58vw); aspect-ratio: 1; border-radius: 50%; background: radial-gradient(circle at 37% 30%, #fff 0, #a8ccff 19%, #5c91e4 49%, rgba(92,145,228,.05) 70%); filter: blur(.2px); }
-.privacy-orb::after { content: ""; position: absolute; left: -8%; right: -8%; bottom: 21%; height: 20%; border-radius: 50%; background: rgba(221,234,250,.56); filter: blur(18px); transform: rotate(-4deg); }
+.privacy-callout { position: relative; width: min(calc(100% - 40px), var(--max)); min-height: 590px; display: flex; align-items: center; margin: 0 auto 20px; overflow: hidden; border-radius: 34px; background: var(--peach); }
+.privacy-orb { position: absolute; right: -5%; width: min(620px, 58vw); aspect-ratio: 1; border-radius: 50%; background: radial-gradient(circle at 37% 30%, #fff8ef 0, #ffc37f 19%, var(--orange) 49%, rgba(255,150,56,.05) 70%); filter: blur(.2px); }
+.privacy-orb::after { content: ""; position: absolute; left: -8%; right: -8%; bottom: 21%; height: 20%; border-radius: 50%; background: rgba(244,223,209,.58); filter: blur(18px); transform: rotate(-4deg); }
 .privacy-copy { position: relative; z-index: 2; width: min(610px, 56%); padding: clamp(38px, 6vw, 82px); }
-.privacy-copy > p:not(.eyebrow) { max-width: 460px; margin: 25px 0 32px; color: #53647b; font-size: 16px; line-height: 1.65; }
+.privacy-copy > p:not(.eyebrow) { max-width: 460px; margin: 25px 0 32px; color: #735039; font-size: 16px; line-height: 1.65; }
 
 footer { display: grid; grid-template-columns: 1fr 1fr; gap: 40px 80px; padding: 94px max(24px, calc((100% - var(--max)) / 2)) 32px; background: var(--ink); color: var(--white); }
 footer .wordmark { color: var(--white); }
