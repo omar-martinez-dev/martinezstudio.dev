@@ -90,6 +90,8 @@ h2 { margin: 0; font-size: clamp(47px, 6.7vw, 88px); font-weight: 650; letter-sp
 .app-device img { width: 100%; border-radius: inherit; }
 .app-device::after { content: ""; position: absolute; inset: 0; border: 9px solid #08090c; border-radius: inherit; box-shadow: inset 0 0 0 1px rgba(255,255,255,.12); pointer-events: none; }
 .app-visual:hover .app-device { transform: translateY(60px) rotate(0); }
+.app-visual > img { position: relative; z-index: 2; width: min(285px, 58%); padding: 9px; border-radius: 41px; background: #08090c; box-shadow: inset 0 0 0 1px rgba(255,255,255,.12), 0 38px 68px rgba(20,20,22,.29); transform: translateY(75px) rotate(2deg); transition: transform .55s var(--ease); }
+.app-visual:hover > img { transform: translateY(60px) rotate(0); }
 .app-visual-label { position: absolute; z-index: 3; right: 23px; bottom: 22px; color: rgba(20,20,22,.78); font-size: 9px; font-weight: 800; letter-spacing: .13em; text-transform: uppercase; }
 
 .principles { border-top: 1px solid var(--line); }
@@ -252,6 +254,7 @@ footer .wordmark-glyph { background: var(--white); color: var(--ink); }
   .app-copy { padding: 38px 24px 44px; }
   .app-visual { min-height: 530px; }
   .app-device { width: min(235px, 62%); }
+  .app-visual > img { width: min(235px, 62%); }
   .privacy-callout { min-height: 620px; align-items: flex-end; border-radius: 24px; }
   .privacy-orb { top: -7%; right: -23%; width: 110vw; }
   .privacy-copy { width: 100%; padding: 32px 25px 38px; }
