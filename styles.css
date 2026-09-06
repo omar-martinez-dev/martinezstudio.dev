@@ -86,8 +86,9 @@ h2 { margin: 0; font-size: clamp(47px, 6.7vw, 88px); font-weight: 650; letter-sp
 .app-visual { position: relative; min-height: 680px; overflow: hidden; display: grid; place-items: center; background: var(--orange); }
 .app-visual::before { content: "OSTINOVA"; position: absolute; top: 7%; left: 50%; color: rgba(20,20,22,.86); font-size: clamp(52px, 7vw, 100px); font-weight: 850; letter-spacing: -.08em; line-height: .8; transform: translateX(-50%); }
 .app-visual::after { content: ""; position: absolute; bottom: -24%; width: 78%; aspect-ratio: 1; border: 1px solid rgba(20,20,22,.28); border-radius: 50%; box-shadow: 0 0 0 72px rgba(20,20,22,.05), 0 0 0 144px rgba(20,20,22,.04); }
-.app-visual img { position: relative; z-index: 2; width: min(285px, 58%); border: 7px solid #08090c; border-radius: 41px; box-shadow: 0 38px 68px rgba(20,20,22,.29); transform: translateY(75px) rotate(2deg); transition: transform .55s var(--ease); }
-.app-visual:hover img { transform: translateY(60px) rotate(0); }
+.app-device { position: relative; z-index: 2; width: min(285px, 58%); display: block; overflow: hidden; padding: 7px; border-radius: 41px; background: #08090c; box-shadow: 0 38px 68px rgba(20,20,22,.29); transform: translateY(75px) rotate(2deg); transition: transform .55s var(--ease); }
+.app-device img { width: 100%; border-radius: 34px; }
+.app-visual:hover .app-device { transform: translateY(60px) rotate(0); }
 .app-visual-label { position: absolute; z-index: 3; right: 23px; bottom: 22px; color: rgba(20,20,22,.78); font-size: 9px; font-weight: 800; letter-spacing: .13em; text-transform: uppercase; }
 
 .principles { border-top: 1px solid var(--line); }
@@ -249,7 +250,7 @@ footer .wordmark-glyph { background: var(--white); color: var(--ink); }
   .app-feature { border-radius: 24px; }
   .app-copy { padding: 38px 24px 44px; }
   .app-visual { min-height: 530px; }
-  .app-visual img { width: min(235px, 62%); }
+  .app-device { width: min(235px, 62%); }
   .privacy-callout { min-height: 620px; align-items: flex-end; border-radius: 24px; }
   .privacy-orb { top: -7%; right: -23%; width: 110vw; }
   .privacy-copy { width: 100%; padding: 32px 25px 38px; }
