@@ -132,7 +132,7 @@ footer .wordmark-glyph { background: var(--white); color: var(--ink); }
 .footer-links a:hover { color: var(--white); }
 .copyright { grid-column: 1 / -1; margin: 48px 0 0; padding-top: 20px; border-top: 1px solid rgba(255,255,255,.12); color: rgba(255,255,255,.36); font-size: 10px; }
 
-.product-hero { width: min(calc(100% - 40px), var(--max)); margin: 0 auto; padding: 170px 0 70px; text-align: center; }
+.product-hero { width: min(calc(100% - 40px), var(--max)); margin: 0 auto; padding: 170px 0 0; text-align: center; }
 .product-hero .hero-copy { margin-bottom: 64px; }
 .product-hero h1 { font-size: clamp(62px, 9vw, 122px); }
 .product-canvas { position: relative; min-height: clamp(600px, 66vw, 800px); overflow: hidden; border-radius: 36px; background: radial-gradient(circle at 50% 62%, #ffab53 0, var(--orange) 26%, var(--orange-deep) 44%, #141416 45%); }
