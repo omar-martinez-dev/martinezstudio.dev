@@ -52,8 +52,27 @@ if (appList) {
 }
 
 observeReveals();
-const updateHeader = () => header?.classList.toggle("is-scrolled", window.scrollY > 18);
+let pointerPosition = { x: -1, y: -1 };
+const pointerIsInHeaderZone = () => {
+  const sideInset = window.innerWidth <= 680 ? 10 : 20;
+  const zoneWidth = Math.min(window.innerWidth - (sideInset * 2), 1120);
+  const zoneLeft = (window.innerWidth - zoneWidth) / 2;
+  return pointerPosition.y >= 0 && pointerPosition.y <= 96 && pointerPosition.x >= zoneLeft && pointerPosition.x <= zoneLeft + zoneWidth;
+};
+const updateHeader = () => {
+  if (!header) return;
+  const isMinimized = window.scrollY > 96;
+  header.classList.toggle("is-scrolled", window.scrollY > 18);
+  header.classList.toggle("is-minimized", isMinimized);
+  header.classList.toggle("is-hover-expanded", isMinimized && pointerIsInHeaderZone());
+};
 updateHeader();
 window.addEventListener("scroll", updateHeader, { passive: true });
+window.addEventListener("pointermove", event => {
+  if (event.pointerType === "touch") return;
+  pointerPosition = { x: event.clientX, y: event.clientY };
+  updateHeader();
+}, { passive: true });
+window.addEventListener("resize", updateHeader, { passive: true });
 document.querySelectorAll("[data-year]").forEach(element => { element.textContent = new Date().getFullYear(); });
 if (reduceMotion.matches) document.querySelectorAll(".reveal").forEach(element => element.classList.add("is-visible"));
