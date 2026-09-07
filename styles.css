@@ -35,6 +35,25 @@ nav a, .nav-cta { color: var(--muted); font-size: 12px; font-weight: 650; text-d
 nav a:hover, nav a:focus-visible, .nav-cta:hover, .nav-cta:focus-visible { color: var(--ink); }
 .nav-cta { justify-self: end; min-height: 40px; display: inline-flex; align-items: center; gap: 12px; padding: 0 17px; border-radius: 999px; background: var(--ink); color: var(--white); }
 .nav-cta:hover, .nav-cta:focus-visible { color: var(--white); }
+.mobile-menu-button { display: none; }
+.mobile-drawer { position: fixed; inset: 8px 8px 8px auto; width: min(430px, calc(100% - 16px)); max-width: none; height: calc(100dvh - 16px); max-height: none; margin: 0; padding: 0; overflow: hidden; border: 0; border-radius: 28px; background: var(--ink); color: var(--white); box-shadow: 0 28px 90px rgba(20,20,22,.35); opacity: 0; transform: translateX(calc(100% + 16px)); transition: opacity .25s ease, transform .42s var(--ease); }
+.mobile-drawer[open] { display: flex; flex-direction: column; padding: 17px; }
+.mobile-drawer.is-open { opacity: 1; transform: none; }
+.mobile-drawer::backdrop { background: rgba(20,20,22,.5); backdrop-filter: blur(6px); }
+.mobile-drawer-header { display: flex; align-items: center; justify-content: space-between; }
+.mobile-drawer .wordmark { color: var(--white); }
+.mobile-drawer .wordmark-glyph { background: var(--white); color: var(--ink); }
+.mobile-drawer-close { min-height: 42px; display: inline-flex; align-items: center; gap: 12px; padding: 0 8px 0 16px; border: 1px solid rgba(255,255,255,.18); border-radius: 999px; background: transparent; color: var(--white); font: 700 12px/1 Inter, ui-sans-serif, sans-serif; cursor: pointer; }
+.mobile-drawer-close i { width: 27px; height: 27px; display: grid; place-items: center; border-radius: 50%; background: var(--white); color: var(--ink); font: normal 400 20px/1 Inter, sans-serif; }
+.mobile-drawer-label { margin: clamp(62px, 11vh, 100px) 0 14px; color: var(--orange); font: 760 10px/1.4 ui-monospace, SFMono-Regular, Consolas, monospace; letter-spacing: .16em; text-transform: uppercase; }
+.mobile-drawer-navigation { display: flex; flex-direction: column; gap: 0; }
+.mobile-drawer-navigation a { display: grid; grid-template-columns: 38px minmax(0, 1fr) 24px; gap: 8px; align-items: baseline; padding: 17px 2px 18px; border-top: 1px solid rgba(255,255,255,.18); color: var(--white); font-size: clamp(35px, 10vw, 48px); font-weight: 630; letter-spacing: -.06em; line-height: .96; text-decoration: none; }
+.mobile-drawer-navigation a:last-child { border-bottom: 1px solid rgba(255,255,255,.18); }
+.mobile-drawer-navigation a:hover, .mobile-drawer-navigation a:focus-visible { color: var(--orange); }
+.mobile-drawer-number { color: var(--orange); font: 750 9px/1.4 ui-monospace, SFMono-Regular, Consolas, monospace; letter-spacing: .1em; }
+.mobile-drawer-arrow { color: rgba(255,255,255,.55); font-size: 18px; letter-spacing: 0; text-align: right; }
+.mobile-drawer-footer { display: flex; justify-content: space-between; gap: 18px; margin-top: auto; padding: 18px 2px 3px; color: rgba(255,255,255,.44); font: 700 9px/1.4 ui-monospace, SFMono-Regular, Consolas, monospace; letter-spacing: .1em; text-transform: uppercase; }
+body.mobile-drawer-open { overflow: hidden; }
 
 .hero { width: min(calc(100% - 40px), var(--max)); margin: 0 auto; padding: 164px 0 58px; text-align: center; }
 .hero-copy { width: min(900px, 100%); margin: 0 auto 74px; }
@@ -244,7 +263,15 @@ footer .wordmark-glyph { background: var(--white); color: var(--ink); }
 }
 
 @media (max-width: 680px) {
-  .site-header { top: 10px; width: calc(100% - 20px); padding-left: 12px; }
+  .site-header { top: 10px; width: calc(100% - 20px); min-height: 58px; grid-template-columns: 1fr auto; padding: 8px 8px 8px 12px; }
+  .site-header::after { display: none; }
+  .site-header .wordmark > span:last-child { display: inline; }
+  .site-header .nav-cta { display: none; }
+  .mobile-menu-button { min-height: 40px; display: inline-flex; align-items: center; gap: 11px; padding: 0 13px 0 16px; border: 0; border-radius: 999px; background: var(--ink); color: var(--white); font: 700 12px/1 Inter, ui-sans-serif, sans-serif; cursor: pointer; }
+  .mobile-menu-lines { width: 17px; display: grid; gap: 4px; }
+  .mobile-menu-lines i { display: block; height: 1px; background: currentColor; }
+  .mobile-menu-lines i:last-child { width: 11px; justify-self: end; }
+  .mobile-drawer .wordmark > span:last-child { display: inline; }
   .wordmark > span:last-child { display: none; }
   .hero, .product-hero { width: min(calc(100% - 24px), var(--max)); padding-top: 124px; }
   .hero-copy { margin-bottom: 48px; }
