@@ -1,5 +1,139 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Privacy information for the Martinez Studio website."><title>Website privacy — Martinez Studio</title><link rel="icon" href="favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="styles.css"></head>
-<body><header class="studio-header is-scrolled"><a class="studio-mark" href="/"><span class="mark-symbol" aria-hidden="true">M</span><span>Martinez Studio</span></a><nav aria-label="Primary navigation"><a href="/#apps">Apps</a><a href="https://github.com/omar-martinez-dev">GitHub</a></nav></header>
-<main class="content-page"><p class="kicker">Website privacy</p><h1>A deliberately quiet website.</h1><p class="lead">Martinez Studio does not add analytics, advertising scripts, accounts, forms, or cookies to this website.</p><h2>What the site processes</h2><p>The site consists of static files hosted through GitHub Pages. Like other web hosts, GitHub may process ordinary request information needed to deliver pages, such as IP address, browser details, requested URLs, and timestamps. GitHub controls that hosting infrastructure under its own privacy terms.</p><h2>External links</h2><p>Links to GitHub and other future distribution platforms take you to services with their own privacy practices. No information is intentionally passed beyond the destination URL.</p><h2>App privacy</h2><p>Each released Martinez Studio app will provide product-specific privacy information on its own page. An app’s behavior is separate from this website.</p><h2>Changes</h2><p>This page was last updated September 1, 2026. It will be revised if the website begins using analytics, forms, accounts, or another data-processing service.</p><p><a href="/">← Return to Martinez Studio</a></p></main>
-</body></html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Learn how the Martinez Studio website handles information and protects your privacy.">
+  <meta name="theme-color" content="#f7f5f0">
+  <title>Website Privacy | Martinez Studio</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <style>
+    :root { color-scheme: light; --ink: #141416; --muted: #666764; --rule: rgba(20, 20, 22, .13); --paper: #fffefa; --canvas: #f7f5f0; --orange: #ff9638; --orange-soft: #fff0df; --peach: #f4dfd1; --mint: #dceede; --max: 1240px; }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 100px; background: var(--canvas); }
+    body { margin: 0; color: var(--ink); background: var(--canvas); font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 16px; line-height: 1.7; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+    a, a:visited { color: inherit; }
+    .skip-link { position: fixed; top: 10px; left: 16px; z-index: 100; padding: 10px 14px; border-radius: 999px; background: var(--ink); color: white; transform: translateY(-160%); }
+    .skip-link:focus { transform: none; }
+
+    .policy-nav { position: sticky; top: 0; z-index: 20; min-height: 74px; display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; padding: 0 max(20px, calc((100% - var(--max)) / 2)); border-bottom: 1px solid var(--rule); background: rgba(247,245,240,.88); backdrop-filter: blur(18px); }
+    .brand { display: inline-flex; align-items: center; gap: 10px; width: max-content; font-size: 14px; font-weight: 760; letter-spacing: -.02em; text-decoration: none; }
+    .brand-mark { width: 31px; height: 31px; display: grid; place-items: center; border-radius: 50%; background: var(--ink); color: white; font: italic 700 13px Georgia, serif; }
+    .policy-nav-center { color: var(--muted); font-size: 12px; font-weight: 700; letter-spacing: .13em; text-transform: uppercase; }
+    .back-link { justify-self: end; min-height: 40px; display: inline-flex; align-items: center; gap: 15px; padding: 0 17px; border-radius: 999px; background: var(--ink); color: white !important; font-size: 12px; font-weight: 750; text-decoration: none; }
+
+    .policy-layout { width: min(calc(100% - 40px), var(--max)); display: grid; grid-template-columns: 220px minmax(0, 720px) minmax(160px, 1fr); gap: clamp(28px, 3.2vw, 44px); align-items: start; margin: 0 auto; padding: 52px 0 110px; }
+    .policy-sidebar { position: sticky; top: 108px; min-width: 0; }
+    .sidebar-site { margin-bottom: 30px; padding: 3px 0 3px 14px; border-left: 3px solid var(--orange); }
+    .sidebar-site .sidebar-context { display: block; margin-bottom: 5px; color: #d96619; font: 750 12px/1.3 ui-monospace, SFMono-Regular, Consolas, monospace; letter-spacing: .09em; text-transform: uppercase; }
+    .sidebar-site strong { display: block; font-size: 14px; letter-spacing: -.015em; line-height: 1.35; }
+    .sidebar-site .sidebar-description { display: block; color: var(--muted); font-size: 12px; }
+    .sidebar-label { margin: 0 0 12px; color: var(--muted); font-size: 12px; font-weight: 800; letter-spacing: .13em; text-transform: uppercase; }
+    .sidebar-toc { max-height: calc(100vh - 245px); overflow-y: auto; padding-right: 12px; scrollbar-width: thin; }
+    .sidebar-toc ol { margin: 0; padding: 0; list-style: none; }
+    .sidebar-toc li { border-top: 1px solid var(--rule); }
+    .sidebar-toc a { display: grid; grid-template-columns: 24px 1fr; gap: 7px; padding: 10px 0; color: var(--muted); font-size: 12px; line-height: 1.35; text-decoration: none; transition: color .2s; }
+    .sidebar-toc a:hover, .sidebar-toc a:focus-visible { color: var(--ink); }
+    .toc-number { color: #d96619; font: 700 12px ui-monospace, SFMono-Regular, Consolas, monospace; }
+    .sidebar-note { margin-top: 22px; padding: 16px; border-radius: 16px; background: var(--ink); color: white; }
+    .sidebar-note span { display: block; margin-bottom: 9px; color: var(--orange); font: 700 12px ui-monospace, SFMono-Regular, Consolas, monospace; letter-spacing: .1em; text-transform: uppercase; }
+    .sidebar-note p { margin: 0; color: rgba(255,255,255,.68); font-size: 12px; line-height: 1.5; }
+
+    .policy-shell { min-width: 0; }
+    .policy-hero { position: relative; min-height: 360px; display: flex; flex-direction: column; justify-content: space-between; margin-bottom: 48px; overflow: hidden; padding: clamp(28px, 5vw, 54px); border: 1px solid var(--rule); border-radius: 30px; background: linear-gradient(135deg, #ffe2bf 0%, #f4dfd1 52%, #dceede 100%); }
+    .policy-hero::after { content: ""; position: absolute; top: -33%; right: -16%; width: 330px; aspect-ratio: 1; border: 1px solid rgba(20,20,22,.12); border-radius: 50%; box-shadow: 0 0 0 52px rgba(255,255,255,.12), 0 0 0 104px rgba(255,255,255,.08); }
+    .hero-kicker { position: relative; z-index: 1; display: flex; align-items: center; gap: 9px; margin: 0; font-size: 12px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; }
+    .hero-kicker::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--orange); box-shadow: 0 0 0 4px rgba(255,150,56,.16); }
+    .policy-hero h1 { position: relative; z-index: 1; max-width: 580px; margin: 70px 0 18px; font-size: clamp(54px, 8vw, 86px); font-weight: 680; letter-spacing: -.075em; line-height: .88; }
+    .policy-hero h1 em { display: block; font-family: Georgia, "Times New Roman", serif; font-weight: 400; }
+    .updated { position: relative; z-index: 1; margin: 0; color: rgba(20,20,22,.62); font-size: 12px; font-weight: 750; letter-spacing: .1em; text-transform: uppercase; }
+
+    .policy-shell section { scroll-margin-top: 100px; }
+    .policy-shell section p, .policy-shell section li { color: #4f504e; }
+    .policy-shell section p { margin: 0 0 20px; }
+    .policy-shell section ul { display: grid; gap: 14px; margin: 24px 0; padding-left: 25px; }
+    .policy-shell strong { color: var(--ink); font-weight: 760; }
+    .policy-shell h2 { margin: 76px 0 22px; padding-top: 24px; border-top: 1px solid var(--rule); font-size: clamp(25px, 3.5vw, 34px); font-weight: 680; letter-spacing: -.045em; line-height: 1.12; }
+    .policy-shell section h2 .section-number { color: #d96619; }
+    .policy-shell h2.summary-heading { margin-top: 48px; padding: 0; border: 0; font: 400 clamp(34px, 5vw, 50px)/1 Georgia, "Times New Roman", serif; }
+    .policy-shell h2.contents-heading { margin: 64px 0 18px; padding: 0; border: 0; font-size: 12px; letter-spacing: .15em; text-transform: uppercase; }
+    .summary { margin: 0 0 12px; padding: 19px 21px; border-left: 3px solid var(--orange); border-radius: 0 15px 15px 0; background: var(--orange-soft); color: #4f4b45; font-size: 15px; line-height: 1.62; }
+    .key-intro { margin: 0 0 20px; padding: 19px 21px; border-radius: 15px; background: var(--peach); color: #55483f; font: italic 16px/1.6 Georgia, serif; }
+    .toc-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 22px; margin: 0 0 40px; padding: 10px 22px; border: 1px solid var(--rule); border-radius: 20px; background: var(--paper); list-style: none; }
+    .toc-list li { min-width: 0; border-bottom: 1px solid var(--rule); }
+    .toc-list li:nth-last-child(-n+2) { border-bottom: 0; }
+    .toc-list a { display: grid; grid-template-columns: 28px 1fr; gap: 6px; padding: 13px 0; color: var(--muted); font-size: 13px; font-weight: 680; line-height: 1.35; text-decoration: none; }
+    .toc-list a:hover, .toc-list a:focus-visible { color: var(--ink); }
+    .policy-footer { margin-top: 84px; padding: 30px 0 0; border-top: 1px solid var(--rule); color: var(--muted); font-size: 12px; }
+
+    .policy-aside-decoration { position: sticky; top: 108px; min-height: 390px; overflow: hidden; border-radius: 24px; background: var(--orange); }
+    .policy-aside-decoration::before { content: ""; position: absolute; right: -55%; bottom: -12%; width: 250px; aspect-ratio: 1; border: 1px solid rgba(20,20,22,.14); border-radius: 50%; box-shadow: 0 0 0 36px rgba(255,255,255,.18), 0 0 0 72px rgba(255,255,255,.12); }
+    .policy-aside-decoration p { position: absolute; right: 18px; bottom: 18px; left: 18px; margin: 0; font: italic 20px/1.12 Georgia, serif; }
+
+    @media (max-width: 1080px) { .policy-layout { grid-template-columns: 210px minmax(0, 760px); justify-content: center; } .policy-aside-decoration { display: none; } }
+    @media (max-width: 820px) { .policy-nav { grid-template-columns: 1fr auto; } .policy-nav-center { display: none; } .policy-layout { width: min(calc(100% - 28px), 760px); display: block; padding-top: 28px; } .policy-sidebar { display: none; } .policy-hero { min-height: 320px; border-radius: 24px; } }
+    @media (max-width: 560px) { html { scroll-padding-top: 80px; } .policy-nav { min-height: 64px; padding-inline: 14px; } .brand > span:last-child { display: none; } .back-link { min-height: 38px; } .policy-layout { width: calc(100% - 20px); padding: 14px 0 72px; } .policy-hero { min-height: 300px; margin-bottom: 34px; padding: 24px; border-radius: 21px; } .policy-hero h1 { margin-top: 64px; font-size: clamp(50px, 15vw, 66px); } .policy-shell h2 { margin-top: 60px; font-size: 26px; } .toc-list { grid-template-columns: 1fr; padding: 8px 18px; } .toc-list li:nth-last-child(2) { border-bottom: 1px solid var(--rule); } .summary, .key-intro { padding: 17px 18px; } }
+
+    @page { size: Letter; margin: .55in; }
+    @media print { html, body { background: white; } body { font-size: 10px; line-height: 1.5; } .policy-nav, .policy-sidebar, .policy-aside-decoration { display: none; } .policy-layout { width: 100%; display: block; margin: 0; padding: 0; } .policy-hero { min-height: 0; margin: 0 0 .35in; padding: 0 0 .2in; border: 0; border-bottom: 1px solid #bbb; border-radius: 0; background: none; } .policy-hero::after, .hero-kicker { display: none; } .policy-hero h1 { margin: 0 0 8px; font-size: 26px; } .policy-shell h2 { margin-top: 24px; padding-top: 12px; font-size: 13px; } .policy-shell h2.summary-heading { font-size: 19px; } .policy-shell section p { margin-bottom: 10px; } .summary, .key-intro { padding: 10px 12px; background: #f5f5f5; } .toc-list { display: block; padding: 8px 18px; } .toc-list li { border: 0; } .toc-list a { padding: 3px 0; } h1, h2, .summary { break-after: avoid; } p, li { orphans: 3; widows: 3; } }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#policy">Skip to policy</a>
+  <header class="policy-nav">
+    <a class="brand" href="./" aria-label="Martinez Studio home"><span class="brand-mark" aria-hidden="true">M</span><span>Martinez Studio</span></a>
+    <span class="policy-nav-center">Martinez Studio · Privacy</span>
+    <a class="back-link" href="./">Studio home <span aria-hidden="true">↗</span></a>
+  </header>
+
+  <div class="policy-layout">
+    <aside class="policy-sidebar" aria-label="Policy sections">
+      <div class="sidebar-site"><span class="sidebar-context">Website · 01</span><strong>martinezstudio.dev</strong><span class="sidebar-description">Privacy policy</span></div>
+      <p class="sidebar-label">On this page</p>
+      <nav class="sidebar-toc" aria-label="Table of contents">
+        <ol>
+          <li><a href="#scope"><span class="toc-number">01</span><span>Scope</span></a></li>
+          <li><a href="#information"><span class="toc-number">02</span><span>Information</span></a></li>
+          <li><a href="#use"><span class="toc-number">03</span><span>How it is used</span></a></li>
+          <li><a href="#tracking"><span class="toc-number">04</span><span>Cookies and tracking</span></a></li>
+          <li><a href="#sharing"><span class="toc-number">05</span><span>Sharing</span></a></li>
+          <li><a href="#retention"><span class="toc-number">06</span><span>Retention and security</span></a></li>
+          <li><a href="#choices"><span class="toc-number">07</span><span>Your choices</span></a></li>
+          <li><a href="#changes"><span class="toc-number">08</span><span>Changes and contact</span></a></li>
+        </ol>
+      </nav>
+      <div class="sidebar-note"><span>Plain language</span><p>Use the contents to jump directly to any section.</p></div>
+    </aside>
+
+    <main class="policy-shell" id="policy">
+      <header class="policy-hero"><p class="hero-kicker">Website privacy</p><h1>Privacy,<em>without guesswork.</em></h1><p class="updated">Last updated September 6, 2026</p></header>
+      <h2 class="summary-heading">At a glance.</h2>
+      <p class="key-intro">This policy explains what martinezstudio.dev handles when you visit the website or contact Martinez Studio.</p>
+      <p class="summary"><strong>In short:</strong> This website has no user accounts, purchases, comments, newsletters, first party analytics, or advertising trackers.</p>
+      <h2 class="contents-heading">Table of contents</h2>
+      <ol class="toc-list">
+        <li><a href="#scope"><span class="toc-number">01</span><span>Scope</span></a></li>
+        <li><a href="#information"><span class="toc-number">02</span><span>Information we handle</span></a></li>
+        <li><a href="#use"><span class="toc-number">03</span><span>How information is used</span></a></li>
+        <li><a href="#tracking"><span class="toc-number">04</span><span>Cookies and tracking</span></a></li>
+        <li><a href="#sharing"><span class="toc-number">05</span><span>Sharing and external links</span></a></li>
+        <li><a href="#retention"><span class="toc-number">06</span><span>Retention and security</span></a></li>
+        <li><a href="#choices"><span class="toc-number">07</span><span>Your choices</span></a></li>
+        <li><a href="#changes"><span class="toc-number">08</span><span>Changes and contact</span></a></li>
+      </ol>
+
+      <section id="scope"><h2><span class="section-number">1.</span> Scope</h2><p>This policy applies only to the Martinez Studio website at martinezstudio.dev. Each app offered by Martinez Studio has its own privacy policy explaining that app’s information practices and the choices available to you.</p></section>
+      <section id="information"><h2><span class="section-number">2.</span> Information we handle</h2><p>The website does not provide user accounts, purchases, comment forms, or newsletter subscriptions. Martinez Studio does not add first party analytics or advertising trackers to the website.</p><ul><li><strong>Technical request data.</strong> Like most websites, the server or hosting provider may process an IP address, browser and device details, requested pages, timestamps, and similar logs needed to deliver, maintain, and secure the site.</li><li><strong>Support communications.</strong> If you email support, Martinez Studio receives your email address, message, and anything else you choose to include.</li></ul></section>
+      <section id="use"><h2><span class="section-number">3.</span> How information is used</h2><p>Technical request data may be used to operate, troubleshoot, and protect the website. Support communications are used to answer your request, investigate issues, and keep an appropriate record of the conversation.</p></section>
+      <section id="tracking"><h2><span class="section-number">4.</span> Cookies and tracking</h2><p>Martinez Studio does not use cookies, local storage, session storage, tracking across sites, or targeted advertising on this website. Because the site does not track visitors across websites, it does not respond differently to browser “Do Not Track” signals.</p></section>
+      <section id="sharing"><h2><span class="section-number">5.</span> Sharing and external links</h2><p>Martinez Studio does not sell personal information or share it for targeted advertising. Information may be handled by service providers that host or secure the website and email service, or disclosed when required by law or necessary to protect rights, safety, and the integrity of the service.</p><p>The website links to outside services such as GitHub. Their privacy practices apply after you follow those links.</p></section>
+      <section id="retention"><h2><span class="section-number">6.</span> Retention and security</h2><p>Support communications are kept only as long as reasonably needed to respond, maintain relevant records, and meet legal obligations. Technical logs are retained according to the operational practices of the hosting provider. Reasonable safeguards are used, but no internet transmission or storage system can be guaranteed completely secure.</p></section>
+      <section id="choices"><h2><span class="section-number">7.</span> Your choices</h2><p>Martinez Studio does not collect personal information directly through martinezstudio.dev. Individual apps offered by Martinez Studio may or may not collect or process information, depending on how they work. Review each app’s individual privacy policy for details about its practices and the choices available to you.</p></section>
+      <section id="changes"><h2><span class="section-number">8.</span> Changes and contact</h2><p>This policy may be updated when the website or its practices change. The date above identifies the latest version. Questions about this policy can be sent to <a href="mailto:support@martinezstudio.dev">support@martinezstudio.dev</a>.</p></section>
+      <footer class="policy-footer">Website Privacy Policy · Martinez Studio</footer>
+    </main>
+
+    <aside class="policy-aside-decoration" aria-hidden="true"><p>Simple site.<br>Minimal data.</p></aside>
+  </div>
+</body>
+</html>

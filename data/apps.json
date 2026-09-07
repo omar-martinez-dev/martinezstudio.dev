@@ -3,11 +3,12 @@
     "name": "Ostinova",
     "eyebrow": "Practice companion for iPhone",
     "status": "In active development",
-    "tagline": "Keep time. Shape the work. Hear the progress.",
-    "description": "A local-first musician’s workspace combining metronome timing, reusable practice regimens, scale playback, recording, and review.",
+    "tagline": "The practice room, brought into focus.",
+    "description": "A local first musician’s workspace for reliable timing, reusable regimens, scale playback, recording, and thoughtful review.",
     "icon": "assets/ostinova-icon.png",
     "image": "assets/screenshots/ostinova-practice.jpg",
     "url": "apps/ostinova/",
+    "privacy": "apps/ostinova/privacy.html",
     "caseStudy": "https://github.com/omar-martinez-dev/ostinova-showcase"
   }
 ]

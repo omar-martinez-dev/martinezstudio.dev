@@ -1,44 +1,88 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Ostinova is a local-first iPhone practice companion for metronome timing, regimens, scales, recording, and review.">
-  <meta name="theme-color" content="#0b0c10">
-  <title>Ostinova — Martinez Studio</title>
-  <link rel="icon" href="../../favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../../styles.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Ostinova is a local first iPhone practice companion for timing, regimens, scales, recording, and review.">
+  <meta name="theme-color" content="#f7f5f0">
+  <title>Ostinova | Martinez Studio</title>
+  <link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../../styles.css?v=20260907-2">
+  <script src="../../script.js?v=20260907-2" defer></script>
 </head>
-<body>
+<body class="product-page">
   <a class="skip-link" href="#main">Skip to content</a>
-  <header class="studio-header is-scrolled"><a class="studio-mark" href="../../"><span class="mark-symbol" aria-hidden="true">M</span><span>Martinez Studio</span></a><nav aria-label="Primary navigation"><a href="../../#apps">Apps</a><a href="https://github.com/omar-martinez-dev/ostinova-showcase">Case study</a></nav></header>
+  <header class="site-header" data-header>
+    <a class="wordmark" href="../../"><span class="wordmark-glyph" aria-hidden="true">M</span><span>Martinez Studio</span></a>
+    <nav aria-label="Primary navigation"><a href="../../#work">Work</a><a href="#details">Features</a><a href="privacy.html">Privacy</a></nav>
+    <a class="nav-cta" href="https://github.com/omar-martinez-dev/ostinova-showcase">Case study <span aria-hidden="true">↗</span></a>
+  </header>
   <main id="main">
     <section class="product-hero">
-      <div class="product-hero-copy enter">
-        <p class="kicker">Practice companion for iPhone</p>
-        <h1>Ostinova<span style="color:var(--accent)">.</span></h1>
-        <p class="lead">Keep time, shape the work, capture the session, and hear the progress—all without breaking focus.</p>
-        <div class="app-actions"><a class="round-link" href="https://github.com/omar-martinez-dev/ostinova-showcase">Engineering case study <span aria-hidden="true">↗</span></a><a class="plain-link" href="#details">Explore the product ↓</a></div>
+      <div class="hero-copy">
+        <p class="eyebrow eyebrow-pill enter"><span aria-hidden="true"></span> Practice companion for iPhone</p>
+        <h1 class="enter delay-1">Practice. Repeat.<br><em>Notice the change.</em></h1>
+        <p class="hero-dek enter delay-2">Keep time, shape the work, capture the session, and hear the progress without breaking focus.</p>
+        <div class="hero-actions enter delay-3"><a class="button button-dark" href="#details">Explore Ostinova <span aria-hidden="true">↓</span></a><a class="quiet-link" href="privacy.html">Read the privacy policy</a></div>
       </div>
-      <div class="product-gallery enter delay-2">
-        <figure class="device"><img src="../../assets/screenshots/ostinova-metronome.jpg" alt="Ostinova metronome"></figure>
-        <figure class="device"><img src="../../assets/screenshots/ostinova-practice.jpg" alt="Ostinova practice regimen library"></figure>
-      </div>
-    </section>
-
-    <section class="product-details" id="details">
-      <div class="product-details-grid">
-        <div><p class="kicker">The product</p><h2>One continuous practice loop.</h2></div>
-        <div>
-          <p>Ostinova brings the tools around deliberate music practice into one local-first experience. A musician can choose a regimen, run it against reliable timing, reference scales, record audio or video, and review the result without moving between unrelated apps.</p>
-          <h3>Core experiences</h3>
-          <ul><li>Configurable metronome with meter, swing, quick tempos, and background audio behavior.</li><li>Reusable multi-block regimens for ramps, gap bars, count-ins, repetitions, and recovery.</li><li>Scale families with configurable roots, spelling, note degrees, and playback.</li><li>Local audio and video capture with countdown, quality controls, and review.</li><li>Transparent advertising privacy tied directly to Apple’s tracking choice.</li></ul>
-          <h3>Product status</h3>
-          <p>Ostinova is in active development. App Store availability and support details will be published here when the release is ready.</p>
-        </div>
+      <div class="product-canvas enter delay-3" aria-label="Ostinova product interface preview">
+        <p class="stage-word" aria-hidden="true">OSTINOVA</p>
+        <p class="canvas-note canvas-note-left">A continuous loop<br>for deliberate practice.</p>
+        <p class="canvas-note canvas-note-right">Local first<br>by design.</p>
+        <figure class="phone phone-main"><img src="../../assets/screenshots/ostinova-metronome.jpg" alt="Ostinova metronome set to 108 beats per minute"></figure>
+        <figure class="phone phone-secondary"><img src="../../assets/screenshots/ostinova-practice.jpg" alt="Ostinova practice regimen library"></figure>
       </div>
     </section>
 
-    <section class="future-section"><p class="kicker">Behind the build</p><h2>Privacy, timing, and monetization are part of the architecture—not afterthoughts.</h2><p>Read the public case study for the system design, tradeoffs, testing approach, and interview discussion guide.</p><a class="round-link round-link-dark" href="https://github.com/omar-martinez-dev/ostinova-showcase">Open the case study <span aria-hidden="true">↗</span></a></section>
+    <section class="product-details" id="details" aria-labelledby="details-title">
+      <div class="feature-intro reveal">
+        <div class="feature-intro-copy"><p class="eyebrow">The practice loop</p><h2 id="details-title">One place to<br><em>keep moving.</em></h2><p>Choose a regimen, run it against reliable timing, reference scales, capture a take, and review the result in one coherent workspace.</p></div>
+        <ol class="feature-index" aria-label="Ostinova practice loop">
+          <li><span class="feature-index-number">01</span><span class="feature-index-name">Time</span><span class="feature-index-note">Find the pulse</span></li>
+          <li><span class="feature-index-number">02</span><span class="feature-index-name">Shape</span><span class="feature-index-note">Build the work</span></li>
+          <li><span class="feature-index-number">03</span><span class="feature-index-name">Scales</span><span class="feature-index-note">See the pattern</span></li>
+          <li><span class="feature-index-number">04</span><span class="feature-index-name">Review</span><span class="feature-index-note">Notice the change</span></li>
+        </ol>
+      </div>
+      <div class="feature-grid">
+        <article class="feature-card reveal">
+          <span class="card-number">01 · TIME</span>
+          <div class="feature-visual"><div class="feature-device"><img src="../../assets/screenshots/ostinova-metronome.jpg" alt="Ostinova metronome interface"></div></div>
+          <h3>Find the pulse.</h3>
+          <p>Configurable meter, swing, quick tempos, count ins, gap bars, and background audio behavior keep timing useful without making it complicated.</p>
+        </article>
+        <article class="feature-card card-mint reveal">
+          <span class="card-number">02 · SHAPE</span>
+          <div class="feature-visual"><div class="feature-device has-dynamic-island"><img src="../../assets/screenshots/ostinova-practice-regimen.jpeg" alt="Ostinova Quick Ramp practice regimen" loading="lazy"></div></div>
+          <h3>Build the work.</h3>
+          <p>Regimens with multiple blocks support ramps, repetitions, recovery, and deliberate progression.</p>
+        </article>
+        <article class="feature-card card-peach reveal">
+          <span class="card-number">03 · SCALES</span>
+          <div class="feature-visual"><div class="feature-device has-dynamic-island"><img src="../../assets/screenshots/ostinova-scales.jpeg" alt="Ostinova scale library and playback controls" loading="lazy"></div></div>
+          <h3>See the pattern.</h3>
+          <p>Browse sound families, choose any key, and hear each pattern ascending and descending without leaving the practice flow.</p>
+        </article>
+        <article class="feature-card card-orange reveal">
+          <span class="card-number">04 · REVIEW</span>
+          <div class="feature-visual"><div class="feature-device has-dynamic-island"><img src="../../assets/screenshots/ostinova-recordings.jpeg" alt="Ostinova practice recording controls" loading="lazy"></div></div>
+          <h3>Notice the change.</h3>
+          <p>Local audio and video capture make it easier to review a session and decide what comes next.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="privacy-callout product-privacy reveal" aria-labelledby="product-privacy-title">
+      <div class="privacy-orb" aria-hidden="true"></div>
+      <div class="privacy-copy"><p class="eyebrow">Privacy is product design</p><h2 id="product-privacy-title">Your practice<br><em>stays yours.</em></h2><p>Ostinova explains device information, location, recordings, advertising choices, and your rights in plain language.</p><a class="button button-dark" href="privacy.html">Read the privacy policy <span aria-hidden="true">→</span></a></div>
+    </section>
   </main>
-  <footer><a class="studio-mark" href="../../"><span class="mark-symbol" aria-hidden="true">M</span><span>Martinez Studio</span></a><p>Independent apps for focused work.</p><div class="footer-links"><a href="../../privacy.html">Website privacy</a><a href="https://omar-martinez-dev.github.io">Developer portfolio</a></div><p class="copyright">© 2026 Martinez Studio</p></footer>
+
+  <footer>
+    <div class="footer-top"><a class="wordmark" href="../../"><span class="wordmark-glyph" aria-hidden="true">M</span><span>Martinez Studio</span></a><p>Independent apps for focused work.</p></div>
+    <p class="footer-statement">Small studio.<br><em>Serious care.</em></p>
+    <div class="footer-links"><a href="../../">Studio home</a><a href="privacy.html">Ostinova privacy</a><a href="../../privacy.html">Website privacy</a><a href="../../support.html">Contact Support</a><a href="https://github.com/omar-martinez-dev/ostinova-showcase">Engineering case study ↗</a></div>
+    <p class="copyright">© <span data-year>2026</span> Martinez Studio</p>
+  </footer>
 </body>
 </html>

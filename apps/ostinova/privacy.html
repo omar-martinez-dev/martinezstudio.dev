@@ -1,0 +1,367 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Read the Ostinova privacy policy and learn how Martinez Studio handles information.">
+  <meta name="theme-color" content="#f7f5f0">
+  <title>Ostinova Privacy Policy | Martinez Studio</title>
+  <link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #141416;
+      --muted: #666764;
+      --rule: rgba(20, 20, 22, .13);
+      --paper: #fffefa;
+      --canvas: #f7f5f0;
+      --orange: #ff9638;
+      --orange-soft: #fff0df;
+      --lilac: #e7e1f7;
+      --mint: #dceede;
+      --max: 1240px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 100px; background: var(--canvas); }
+    body { margin: 0; color: var(--ink); background: var(--canvas); font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 15px; line-height: 1.7; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+    a, a:visited { color: inherit; }
+    .skip-link { position: fixed; top: 10px; left: 16px; z-index: 100; padding: 10px 14px; border-radius: 999px; background: var(--ink); color: white; transform: translateY(-160%); }
+    .skip-link:focus { transform: none; }
+
+    .policy-nav { position: sticky; top: 0; z-index: 20; min-height: 74px; display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; padding: 0 max(20px, calc((100% - var(--max)) / 2)); border-bottom: 1px solid var(--rule); background: rgba(247,245,240,.88); backdrop-filter: blur(18px); }
+    .brand { display: inline-flex; align-items: center; gap: 10px; width: max-content; font-size: 13px; font-weight: 760; letter-spacing: -.02em; text-decoration: none; }
+    .brand-mark { width: 31px; height: 31px; display: grid; place-items: center; border-radius: 50%; background: var(--ink); color: white; font: italic 700 13px Georgia, serif; }
+    .policy-nav-center { color: var(--muted); font-size: 11px; font-weight: 700; letter-spacing: .13em; text-transform: uppercase; }
+    .back-link { justify-self: end; min-height: 40px; display: inline-flex; align-items: center; gap: 15px; padding: 0 17px; border-radius: 999px; background: var(--ink); color: white !important; font-size: 11px; font-weight: 750; text-decoration: none; }
+
+    .policy-layout { width: min(calc(100% - 40px), var(--max)); display: grid; grid-template-columns: 220px minmax(0, 720px) minmax(160px, 1fr); gap: clamp(28px, 3.2vw, 44px); align-items: start; margin: 0 auto; padding: 52px 0 110px; }
+    .policy-sidebar { position: sticky; top: 108px; min-width: 0; }
+    .sidebar-app { display: flex; align-items: center; gap: 12px; margin-bottom: 30px; }
+    .sidebar-app img { width: 42px; height: 42px; border-radius: 11px; }
+    .sidebar-app strong { display: block; font-size: 13px; }
+    .sidebar-app span { display: block; color: var(--muted); font-size: 10px; }
+    .sidebar-label { margin: 0 0 12px; color: var(--muted); font-size: 9px; font-weight: 800; letter-spacing: .15em; text-transform: uppercase; }
+    .sidebar-toc { max-height: calc(100vh - 245px); overflow-y: auto; padding-right: 12px; scrollbar-width: thin; }
+    .sidebar-toc ol { margin: 0; padding: 0; list-style: none; }
+    .sidebar-toc li { border-top: 1px solid var(--rule); }
+    .sidebar-toc a { display: grid; grid-template-columns: 22px 1fr; gap: 7px; padding: 10px 0; color: var(--muted); font-size: 10px; line-height: 1.35; text-decoration: none; transition: color .2s; }
+    .sidebar-toc a:hover, .sidebar-toc a:focus-visible { color: var(--ink); }
+    .sidebar-toc .toc-number { color: var(--orange); font: 700 9px ui-monospace, monospace; }
+    .sidebar-note { margin-top: 22px; padding: 16px; border-radius: 16px; background: var(--ink); color: white; }
+    .sidebar-note span { display: block; margin-bottom: 9px; color: var(--orange); font: 700 9px ui-monospace, monospace; letter-spacing: .1em; text-transform: uppercase; }
+    .sidebar-note p { margin: 0; color: rgba(255,255,255,.62); font-size: 11px; line-height: 1.5; }
+
+    .policy-shell { min-width: 0; }
+    .policy-hero { position: relative; min-height: 360px; display: flex; flex-direction: column; justify-content: space-between; margin-bottom: 48px; overflow: hidden; padding: clamp(28px, 5vw, 54px); border: 1px solid var(--rule); border-radius: 30px; background: linear-gradient(135deg, #ffe2bf 0%, #f2dafa 52%, #dceafa 100%); }
+    .policy-hero::after { content: ""; position: absolute; top: -33%; right: -16%; width: 330px; aspect-ratio: 1; border: 1px solid rgba(20,20,22,.12); border-radius: 50%; box-shadow: 0 0 0 52px rgba(255,255,255,.12), 0 0 0 104px rgba(255,255,255,.08); }
+    .hero-kicker { position: relative; z-index: 1; display: flex; align-items: center; gap: 9px; margin: 0; font-size: 9px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; }
+    .hero-kicker::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--orange); box-shadow: 0 0 0 4px rgba(255,150,56,.16); }
+    .policy-hero h1 { position: relative; z-index: 1; max-width: 580px; margin: 70px 0 18px; font-size: clamp(54px, 8vw, 86px); font-weight: 680; letter-spacing: -.075em; line-height: .88; }
+    .policy-hero h1 em { display: block; font-family: Georgia, "Times New Roman", serif; font-weight: 400; }
+    .updated { position: relative; z-index: 1; margin: 0; color: rgba(20,20,22,.62); font-size: 10px; font-weight: 750; letter-spacing: .1em; text-transform: uppercase; }
+
+    .policy-shell > p { margin: 0 0 20px; color: #4f504e; }
+    .policy-shell > p:not(.summary):not(.key-intro):not(.subheading):not(.bullet) { max-width: 690px; }
+    .policy-shell strong { color: var(--ink); font-weight: 760; }
+    .policy-shell h2 { margin: 76px 0 22px; padding-top: 24px; border-top: 1px solid var(--rule); font-size: clamp(25px, 3.5vw, 34px); font-weight: 680; letter-spacing: -.045em; line-height: 1.12; scroll-margin-top: 100px; }
+    .policy-shell h2 .section-number { color: var(--orange); }
+    .policy-shell h2.summary-heading { margin-top: 48px; padding: 0; border: 0; font: 400 clamp(34px, 5vw, 50px)/1 Georgia, "Times New Roman", serif; text-transform: none; }
+    .policy-shell h2.contents-heading { margin: 64px 0 18px; padding: 0; border: 0; font-size: 11px; letter-spacing: .15em; text-transform: uppercase; }
+    .summary { margin: 0 0 12px !important; padding: 19px 21px; border-left: 3px solid var(--orange); border-radius: 0 15px 15px 0; background: var(--orange-soft); color: #4f4b45 !important; font-size: 14px; line-height: 1.62; }
+    .key-intro { margin-bottom: 20px !important; padding: 19px 21px; border-radius: 15px; background: var(--lilac); color: #4d4855 !important; font: italic 15px/1.6 Georgia, serif; }
+    .bullet { position: relative; margin-left: 0 !important; padding: 0 0 0 25px; }
+    .bullet::before { content: ""; position: absolute; top: .68em; left: 2px; width: 7px; height: 7px; border-radius: 50%; background: var(--orange); }
+    .subheading { margin: 34px 0 12px !important; color: var(--ink) !important; font-size: 17px; font-weight: 760; letter-spacing: -.015em; }
+
+    .toc-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 22px; margin: 0 0 40px; padding: 10px 22px; border: 1px solid var(--rule); border-radius: 20px; background: var(--paper); list-style: none; counter-reset: policy-toc; }
+    .toc-list li { min-width: 0; border-bottom: 1px solid var(--rule); counter-increment: policy-toc; }
+    .toc-list li:nth-last-child(-n+2) { border-bottom: 0; }
+    .toc-list a { display: grid; grid-template-columns: 26px 1fr; gap: 6px; padding: 13px 0; color: var(--muted); font-size: 11px; font-weight: 680; line-height: 1.35; text-decoration: none; }
+    .toc-list a::before { content: counter(policy-toc, decimal-leading-zero); color: var(--orange); font: 700 9px ui-monospace, monospace; }
+    .toc-list a:hover, .toc-list a:focus-visible { color: var(--ink); }
+
+    .data-table-wrap { width: 100%; margin: 26px 0 30px; overflow-x: auto; border: 1px solid var(--rule); border-radius: 18px; background: var(--paper); }
+    .data-table { width: 100%; min-width: 660px; border-collapse: collapse; font-size: 11px; line-height: 1.48; }
+    .data-table th, .data-table td { padding: 13px 14px; border-bottom: 1px solid var(--rule); text-align: left; vertical-align: top; }
+    .data-table th { position: sticky; top: 0; background: var(--ink); color: white; font-size: 9px; letter-spacing: .08em; text-transform: uppercase; }
+    .data-table tbody tr:nth-child(even) { background: #f8f7f3; }
+    .data-table tr:last-child td { border-bottom: 0; }
+    .data-table td:first-child { width: 30%; font-weight: 760; }
+    .data-table td:last-child { width: 12%; text-align: center; font-weight: 800; }
+    .policy-footer { margin-top: 84px; padding: 30px 0 0; border-top: 1px solid var(--rule); color: var(--muted); font-size: 10px; }
+    .load-error { padding: 18px; border: 1px solid #b42318; border-radius: 14px; color: #b42318; background: #fff5f4; }
+
+    .policy-aside-decoration { position: sticky; top: 108px; min-height: 390px; overflow: hidden; border-radius: 24px; background: var(--mint); }
+    .policy-aside-decoration::before { content: ""; position: absolute; right: -55%; bottom: -12%; width: 250px; aspect-ratio: 1; border: 1px solid rgba(20,20,22,.14); border-radius: 50%; box-shadow: 0 0 0 36px rgba(255,255,255,.18), 0 0 0 72px rgba(255,255,255,.12); }
+    .policy-aside-decoration p { position: absolute; right: 18px; bottom: 18px; left: 18px; margin: 0; font: italic 20px/1.12 Georgia, serif; }
+
+    @media (max-width: 1080px) {
+      .policy-layout { grid-template-columns: 210px minmax(0, 760px); justify-content: center; }
+      .policy-aside-decoration { display: none; }
+    }
+
+    @media (max-width: 820px) {
+      .policy-nav { grid-template-columns: 1fr auto; }
+      .policy-nav-center { display: none; }
+      .policy-layout { width: min(calc(100% - 28px), 760px); display: block; padding-top: 28px; }
+      .policy-sidebar { display: none; }
+      .policy-hero { min-height: 320px; border-radius: 24px; }
+    }
+
+    @media (max-width: 560px) {
+      html { scroll-padding-top: 80px; }
+      body { font-size: 14px; }
+      .policy-nav { min-height: 64px; padding-inline: 14px; }
+      .brand > span:last-child { display: none; }
+      .back-link { min-height: 38px; }
+      .policy-layout { width: calc(100% - 20px); padding: 14px 0 72px; }
+      .policy-hero { min-height: 300px; margin-bottom: 34px; padding: 24px; border-radius: 21px; }
+      .policy-hero h1 { margin-top: 64px; font-size: clamp(50px, 15vw, 66px); }
+      .policy-shell h2 { margin-top: 60px; font-size: 26px; }
+      .toc-list { grid-template-columns: 1fr; padding: 8px 18px; }
+      .toc-list li:nth-last-child(2) { border-bottom: 1px solid var(--rule); }
+      .summary, .key-intro { padding: 17px 18px; }
+      .data-table-wrap { margin-inline: 0; border-radius: 14px; }
+    }
+
+    @page { size: Letter; margin: .55in; }
+    @media print {
+      html, body { background: white; }
+      body { font-size: 9.5px; line-height: 1.5; }
+      .policy-nav, .policy-sidebar, .policy-aside-decoration { display: none; }
+      .policy-layout { width: 100%; display: block; margin: 0; padding: 0; }
+      .policy-hero { min-height: 0; margin: 0 0 .35in; padding: 0 0 .2in; border: 0; border-bottom: 1px solid #bbb; border-radius: 0; background: none; }
+      .policy-hero::after, .hero-kicker { display: none; }
+      .policy-hero h1 { margin: 0 0 8px; font-size: 26px; }
+      .policy-shell h2 { margin-top: 24px; padding-top: 12px; font-size: 13px; }
+      .policy-shell h2.summary-heading { font-size: 19px; }
+      .policy-shell > p { margin-bottom: 10px; }
+      .summary, .key-intro { padding: 10px 12px; background: #f5f5f5; }
+      .toc-list { display: block; padding: 8px 18px; }
+      .toc-list li { border: 0; }
+      .toc-list a { padding: 3px 0; }
+      .data-table { min-width: 0; font-size: 7.5px; }
+      .data-table th, .data-table td { padding: 5px 6px; }
+      h1, h2, .summary, .subheading { break-after: avoid; }
+      p, li, tr { orphans: 3; widows: 3; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#policy">Skip to policy</a>
+  <header class="policy-nav">
+    <a class="brand" href="../../" aria-label="Martinez Studio home"><span class="brand-mark" aria-hidden="true">M</span><span>Martinez Studio</span></a>
+    <span class="policy-nav-center">Ostinova · Privacy</span>
+    <a class="back-link" href="./">Back to Ostinova <span aria-hidden="true">↗</span></a>
+  </header>
+
+  <div class="policy-layout">
+    <aside class="policy-sidebar" aria-label="Policy sections">
+      <div class="sidebar-app"><img src="../../assets/ostinova-icon.png" alt=""><div><strong>Ostinova</strong><span>Privacy policy</span></div></div>
+      <p class="sidebar-label">On this page</p>
+      <nav class="sidebar-toc" id="sidebar-toc" aria-label="Table of contents"></nav>
+      <div class="sidebar-note"><span>Plain language</span><p>Use the contents to jump directly to any section.</p></div>
+    </aside>
+
+    <main class="policy-shell" id="policy" aria-live="polite"></main>
+
+    <aside class="policy-aside-decoration" aria-hidden="true"><p>Your information.<br>Your choices.</p></aside>
+  </div>
+
+  <script>
+    const policy = document.querySelector('#policy');
+    const sidebarToc = document.querySelector('#sidebar-toc');
+
+    function escapeHtml(value) {
+      return value.replace(/[&<>"']/g, character => ({
+        '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#039;'
+      })[character]);
+    }
+
+    function addInlineEmphasis(text) {
+      const safe = escapeHtml(text);
+      return safe
+        .replace(/^(In Short:)/, '<strong>$1</strong>')
+        .replace(/^(Questions or concerns\?)/, '<strong>$1</strong>')
+        .replace(/^(What personal information do we process\?)/, '<strong>$1</strong>')
+        .replace(/^(Do we process any sensitive personal information\?)/, '<strong>$1</strong>')
+        .replace(/^(Do we collect any information from third parties\?)/, '<strong>$1</strong>')
+        .replace(/^(How do we process your information\?)/, '<strong>$1</strong>')
+        .replace(/^(How do we keep your information safe\?)/, '<strong>$1</strong>')
+        .replace(/^(What are your rights\?)/, '<strong>$1</strong>')
+        .replace(/^(How do you exercise your rights\?)/, '<strong>$1</strong>')
+        .replace(/^(Sensitive Information\.|Payment Data\.|Application Data\.|Mobile Device Data\.|Log and Usage Data\.|Device Data\.|Location Data\.|Business Transfers\.)/, '<strong>$1</strong>');
+    }
+
+    function normalizeText(text) {
+      return text
+        .replace(/\("\s+/g, '("')
+        .replace(/\s+"\)/g, '")')
+        .replace(/"process\s+"/g, '"process"')
+        .replace(/\s+([,.;:?!])/g, '$1');
+    }
+
+    function buildDataTable() {
+      const rows = [
+        ['A. Identifiers', 'Contact details, including name, postal address, telephone number, online identifier, IP address, email address, and account name', 'YES'],
+        ['B. California Customer Records information', 'Name, contact information, education, employment history, and financial information', 'NO'],
+        ['C. Protected classifications', 'Gender, age, date of birth, race and ethnicity, national origin, marital status, and other demographic data', 'NO'],
+        ['D. Commercial information', 'Transaction information, purchase history, financial details, and payment information', 'YES'],
+        ['E. Biometric information', 'Fingerprints and voiceprints', 'NO'],
+        ['F. Internet or network activity', 'Browsing and search history, online behavior, interest data, and interactions with websites, applications, systems, and advertisements', 'YES'],
+        ['G. Geolocation data', 'Device location', 'YES'],
+        ['H. Audio, electronic, or sensory information', 'Images and audio, video, or call recordings created in connection with business activities', 'YES'],
+        ['I. Professional or employment information', 'Business contact details, job title, work history, and professional qualifications', 'NO'],
+        ['J. Education information', 'Student records and directory information', 'NO'],
+        ['K. Inferences', 'Inferences used to create a profile or summary of preferences and characteristics', 'YES'],
+        ['L. Sensitive personal information', '', 'NO']
+      ];
+      const wrap = document.createElement('div');
+      wrap.className = 'data-table-wrap';
+      wrap.innerHTML = `<table class="data-table"><thead><tr><th>Category</th><th>Examples</th><th>Collected</th></tr></thead><tbody>${rows.map(row => `<tr>${row.map(cell => `<td>${escapeHtml(cell)}</td>`).join('')}</tr>`).join('')}</tbody></table>`;
+      return wrap;
+    }
+
+    function extractContents(lines) {
+      const items = [];
+      lines.forEach(line => {
+        const match = line.match(/^(\d+)\.\s*(.*)$/);
+        if (match) items.push(match[2]);
+        else if (items.length) items[items.length - 1] += ` ${line}`;
+      });
+      return items;
+    }
+
+    function buildContentsList(items) {
+      const list = document.createElement('ol');
+      list.className = 'toc-list';
+      items.forEach((item, index) => {
+        const listItem = document.createElement('li');
+        listItem.innerHTML = `<a href="#section-${index + 1}">${escapeHtml(item)}</a>`;
+        list.appendChild(listItem);
+      });
+      return list;
+    }
+
+    function renderSidebar(items) {
+      const list = document.createElement('ol');
+      items.forEach((item, index) => {
+        const listItem = document.createElement('li');
+        listItem.innerHTML = `<a href="#section-${index + 1}"><span class="toc-number">${String(index + 1).padStart(2, '0')}</span><span>${escapeHtml(item)}</span></a>`;
+        list.appendChild(listItem);
+      });
+      sidebarToc.replaceChildren(list);
+    }
+
+    function renderPolicy(source) {
+      const blocks = source
+        .replace(/\r/g, '')
+        .split(/\n\s*\n/)
+        .map(block => block.split('\n').map(line => line.trim()).filter(Boolean))
+        .filter(block => block.length);
+
+      const fragment = document.createDocumentFragment();
+      const updatedText = normalizeText((blocks[1] || ['']).join(' '));
+      const hero = document.createElement('header');
+      hero.className = 'policy-hero';
+      hero.innerHTML = `<p class="hero-kicker">Ostinova privacy</p><h1>Privacy,<em>in plain language.</em></h1><p class="updated">${escapeHtml(updatedText)}</p>`;
+      fragment.appendChild(hero);
+
+      let inTableOfContents = false;
+      let tableOfContentsRendered = false;
+      let skippingExtractedTable = false;
+      let sectionIndex = 0;
+
+      const bulletStarts = /^(Download and use|Engage with us|Log and Usage Data\.|Device Data\.|Location Data\.|To respond to user inquiries|To request feedback|To deliver targeted advertising|To evaluate and improve|To identify usage trends|Receiving help through|Participation in customer|Facilitation in the delivery|Category [ADFGHK] -|Right to )/;
+      const subheadingStarts = /^(Personal information you disclose to us|Information automatically collected|Categories of Personal Information We Collect|Sources of Personal Information|How We Use and Share Personal Information|Will your information be shared with anyone else\?|Your Rights|How to Exercise Your Rights|Request Verification|Appeals)$/;
+
+      blocks.forEach((lines, index) => {
+        if (index < 2) return;
+        const text = normalizeText(lines.join(' ').replace(/\s+/g, ' ').trim());
+        let element;
+
+        if (/^CategoryExamplesCollected/.test(text)) {
+          fragment.appendChild(buildDataTable());
+          skippingExtractedTable = true;
+          return;
+        }
+        if (skippingExtractedTable) {
+          if (!/^We may also collect other personal information/.test(text)) return;
+          skippingExtractedTable = false;
+        }
+
+        if (inTableOfContents && !tableOfContentsRendered && /^1\.\s/.test(lines[0])) {
+          const items = extractContents(lines);
+          fragment.appendChild(buildContentsList(items));
+          renderSidebar(items);
+          tableOfContentsRendered = true;
+          return;
+        }
+        if (inTableOfContents && tableOfContentsRendered && /^1\.\s/.test(lines[0])) inTableOfContents = false;
+
+        if (text === 'TABLE OF CONTENTS') {
+          inTableOfContents = true;
+          element = document.createElement('h2');
+          element.className = 'contents-heading';
+          element.textContent = text;
+        } else if (/^\d+\.\s+[A-Z]/.test(text) || /^[A-Z][A-Z\s-?]+$/.test(text)) {
+          if (/^1\. WHAT INFORMATION DO WE COLLECT\?/.test(text)) inTableOfContents = false;
+          element = document.createElement(inTableOfContents ? 'p' : 'h2');
+          const numberedHeading = !inTableOfContents && text.match(/^(\d+\.)\s+(.+)$/);
+          if (numberedHeading) {
+            const number = document.createElement('span');
+            number.className = 'section-number';
+            number.textContent = numberedHeading[1];
+            element.append(number, ` ${numberedHeading[2]}`);
+          } else {
+            element.textContent = text;
+          }
+          if (inTableOfContents) {
+            element.className = 'toc-item';
+          } else if (numberedHeading) {
+            sectionIndex += 1;
+            element.id = `section-${sectionIndex}`;
+          } else if (text === 'SUMMARY OF KEY POINTS') {
+            element.className = 'summary-heading';
+          }
+        } else if (/^In Short:/.test(text)) {
+          element = document.createElement('p');
+          element.className = 'summary';
+          element.innerHTML = addInlineEmphasis(text);
+        } else if (/^This summary provides key points/.test(text)) {
+          element = document.createElement('p');
+          element.className = 'key-intro';
+          element.textContent = text;
+        } else if (subheadingStarts.test(text)) {
+          element = document.createElement('p');
+          element.className = 'subheading';
+          element.textContent = text;
+        } else if (bulletStarts.test(text)) {
+          element = document.createElement('p');
+          element.className = 'bullet';
+          element.innerHTML = addInlineEmphasis(text);
+        } else {
+          element = document.createElement('p');
+          element.innerHTML = addInlineEmphasis(text);
+        }
+
+        fragment.appendChild(element);
+      });
+
+      const footer = document.createElement('footer');
+      footer.className = 'policy-footer';
+      footer.textContent = 'Ostinova Privacy Policy · Martinez Studio';
+      fragment.appendChild(footer);
+      policy.replaceChildren(fragment);
+    }
+
+    fetch('./privacy-policy.txt')
+      .then(response => { if (!response.ok) throw new Error(`Unable to load policy (${response.status})`); return response.text(); })
+      .then(renderPolicy)
+      .catch(error => {
+        policy.innerHTML = `<p class="load-error"><strong>Policy could not be loaded.</strong><br>${escapeHtml(error.message)}. Serve this folder from a local web server instead of opening the HTML file directly.</p>`;
+      });
+  </script>
+</body>
+</html>
