@@ -110,14 +110,14 @@ h2 { margin: 0; font-size: clamp(47px, 6.7vw, 88px); font-weight: 650; letter-sp
 .card-mint { background: var(--mint); }.card-lilac { background: var(--lilac); }.card-peach { background: var(--peach); }
 
 .studio-privacy { width: min(calc(100% - 40px), var(--max)); display: grid; grid-template-columns: minmax(0, .9fr) minmax(360px, 1.1fr); gap: clamp(60px, 10vw, 150px); margin: 0 auto 20px; padding: clamp(90px, 10vw, 140px) 0; border-top: 1px solid var(--ink); border-bottom: 1px solid var(--ink); }
-.studio-privacy-heading .eyebrow { color: var(--orange-deep); }
+.studio-privacy-heading .eyebrow { color: var(--orange); }
 .studio-privacy-heading h2 { font-size: clamp(48px, 6vw, 80px); }
-.studio-privacy-heading h2 em { color: var(--orange-deep); }
+.studio-privacy-heading h2 em { color: var(--orange); }
 .studio-privacy-detail { align-self: end; }
 .studio-privacy-copy { max-width: 570px; margin: 0 0 42px; color: var(--muted); font-size: 17px; line-height: 1.7; }
 .privacy-promises { margin: 0 0 38px; padding: 0; border-top: 1px solid var(--line); list-style: none; }
 .privacy-promises li { display: grid; grid-template-columns: 46px 1fr; gap: 18px; align-items: baseline; padding: 17px 0; border-bottom: 1px solid var(--line); }
-.privacy-promises span { color: var(--orange-deep); font: 750 10px/1.4 ui-monospace, SFMono-Regular, Consolas, monospace; letter-spacing: .1em; }
+.privacy-promises span { color: var(--orange); font: 750 10px/1.4 ui-monospace, SFMono-Regular, Consolas, monospace; letter-spacing: .1em; }
 .privacy-promises strong { font-size: 15px; letter-spacing: -.015em; }
 
 footer { display: grid; grid-template-columns: 1fr 1fr; column-gap: 80px; row-gap: 0; padding: 72px max(24px, calc((100% - var(--max)) / 2)) 30px; background: var(--ink); color: var(--white); }
