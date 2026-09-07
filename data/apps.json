@@ -4,7 +4,7 @@
     "eyebrow": "Practice companion for iPhone",
     "status": "In active development",
     "tagline": "The practice room, brought into focus.",
-    "description": "A local-first musician’s workspace for reliable timing, reusable regimens, scale playback, recording, and thoughtful review.",
+    "description": "A local first musician’s workspace for reliable timing, reusable regimens, scale playback, recording, and thoughtful review.",
     "icon": "assets/ostinova-icon.png",
     "image": "assets/screenshots/ostinova-practice.jpg",
     "url": "apps/ostinova/",
@@ -12,4 +12,3 @@
     "caseStudy": "https://github.com/omar-martinez-dev/ostinova-showcase"
   }
 ]
-
