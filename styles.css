@@ -162,7 +162,11 @@ footer .wordmark-glyph { background: var(--white); color: var(--ink); }
 .feature-device img { width: 100%; border-radius: 32px; }
 .feature-device.has-dynamic-island::after { content: ""; position: absolute; z-index: 3; top: calc(7px + 1.75%); left: 50%; width: 31.5%; aspect-ratio: 116 / 32; border-radius: 999px; background: #000; transform: translateX(-50%); pointer-events: none; }
 .feature-card:nth-child(even) .feature-device { transform: rotate(3deg); }
-.product-privacy { margin-bottom: 20px; }
+.product-privacy { position: relative; width: min(calc(100% - 40px), var(--max)); min-height: 590px; display: flex; align-items: center; margin: 0 auto 20px; overflow: hidden; border-radius: 34px; background: var(--peach); }
+.product-privacy .privacy-orb { position: absolute; right: -5%; width: min(620px, 58vw); aspect-ratio: 1; border-radius: 50%; background: radial-gradient(circle at 37% 30%, #fff8ef 0, #ffc37f 19%, var(--orange) 49%, rgba(255,150,56,.05) 70%); filter: blur(.2px); }
+.product-privacy .privacy-orb::after { content: ""; position: absolute; left: -8%; right: -8%; bottom: 21%; height: 20%; border-radius: 50%; background: rgba(244,223,209,.58); filter: blur(18px); transform: rotate(-4deg); }
+.product-privacy .privacy-copy { position: relative; z-index: 2; width: min(610px, 56%); padding: clamp(38px, 6vw, 82px); }
+.product-privacy .privacy-copy > p:not(.eyebrow) { max-width: 460px; margin: 25px 0 32px; color: #735039; font-size: 16px; line-height: 1.65; }
 
 .content-page { width: min(760px, calc(100% - 44px)); margin: 0 auto; padding: 150px 0 100px; }
 .content-page h1 { font-size: clamp(54px, 8vw, 96px); }
@@ -269,6 +273,9 @@ footer .wordmark-glyph { background: var(--white); color: var(--ink); }
   .app-visual { min-height: 530px; }
   .app-visual > img { width: min(235px, 62%); }
   .studio-privacy { padding: 78px 0; }
+  .product-privacy { width: calc(100% - 24px); min-height: 620px; align-items: flex-end; border-radius: 24px; }
+  .product-privacy .privacy-orb { top: -7%; right: -23%; width: 110vw; }
+  .product-privacy .privacy-copy { width: 100%; padding: 32px 25px 38px; }
   footer { grid-template-columns: 1fr; padding-top: 60px; }
   .footer-statement { margin-top: 42px; }
   .footer-links { grid-template-columns: 1fr; margin-top: 38px; }
