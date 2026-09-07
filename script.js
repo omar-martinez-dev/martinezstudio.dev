@@ -60,10 +60,12 @@ if (header) {
   menuButton.type = "button";
   menuButton.setAttribute("aria-label", "Open navigation");
   menuButton.setAttribute("aria-expanded", "false");
+  menuButton.setAttribute("aria-controls", "mobile-navigation-drawer");
   menuButton.innerHTML = '<span>Menu</span><span class="mobile-menu-lines" aria-hidden="true"><i></i><i></i></span>';
 
   const drawer = document.createElement("dialog");
   drawer.className = "mobile-drawer";
+  drawer.id = "mobile-navigation-drawer";
   drawer.setAttribute("aria-labelledby", "mobile-drawer-title");
 
   const drawerHeader = document.createElement("div");
@@ -132,7 +134,10 @@ if (header) {
     drawer.showModal();
     document.body.classList.add("mobile-drawer-open");
     menuButton.setAttribute("aria-expanded", "true");
-    window.requestAnimationFrame(() => drawer.classList.add("is-open"));
+    window.requestAnimationFrame(() => {
+      drawer.classList.add("is-open");
+      closeButton.focus({ preventScroll: true });
+    });
   };
 
   menuButton.addEventListener("click", openDrawer);
