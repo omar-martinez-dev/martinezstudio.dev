@@ -64,6 +64,8 @@
     .policy-shell > p { margin: 0 0 20px; color: #4f504e; }
     .policy-shell > p:not(.summary):not(.key-intro):not(.subheading):not(.bullet) { max-width: 690px; }
     .policy-shell strong { color: var(--ink); font-weight: 760; }
+    .policy-shell p a { color: #8a4c16; font-weight: 680; text-decoration-thickness: 1px; text-underline-offset: 3px; overflow-wrap: anywhere; }
+    .policy-shell p a:hover, .policy-shell p a:focus-visible { color: var(--ink); }
     .policy-shell h2 { margin: 76px 0 22px; padding-top: 24px; border-top: 1px solid var(--rule); font-size: clamp(25px, 3.5vw, 34px); font-weight: 680; letter-spacing: -.045em; line-height: 1.12; scroll-margin-top: 100px; }
     .policy-shell h2 .section-number { color: var(--orange); }
     .policy-shell h2.summary-heading { margin-top: 48px; padding: 0; border: 0; font: 400 clamp(34px, 5vw, 50px)/1 Georgia, "Times New Roman", serif; text-transform: none; }
@@ -81,14 +83,6 @@
     .toc-list a::before { content: counter(policy-toc, decimal-leading-zero); color: var(--orange); font: 700 9px ui-monospace, monospace; }
     .toc-list a:hover, .toc-list a:focus-visible { color: var(--ink); }
 
-    .data-table-wrap { width: 100%; margin: 26px 0 30px; overflow-x: auto; border: 1px solid var(--rule); border-radius: 18px; background: var(--paper); }
-    .data-table { width: 100%; min-width: 660px; border-collapse: collapse; font-size: 11px; line-height: 1.48; }
-    .data-table th, .data-table td { padding: 13px 14px; border-bottom: 1px solid var(--rule); text-align: left; vertical-align: top; }
-    .data-table th { position: sticky; top: 0; background: var(--ink); color: white; font-size: 9px; letter-spacing: .08em; text-transform: uppercase; }
-    .data-table tbody tr:nth-child(even) { background: #f8f7f3; }
-    .data-table tr:last-child td { border-bottom: 0; }
-    .data-table td:first-child { width: 30%; font-weight: 760; }
-    .data-table td:last-child { width: 12%; text-align: center; font-weight: 800; }
     .policy-footer { margin-top: 84px; padding: 30px 0 0; border-top: 1px solid var(--rule); color: var(--muted); font-size: 10px; }
     .load-error { padding: 18px; border: 1px solid #b42318; border-radius: 14px; color: #b42318; background: #fff5f4; }
 
@@ -122,7 +116,6 @@
       .toc-list { grid-template-columns: 1fr; padding: 8px 18px; }
       .toc-list li:nth-last-child(2) { border-bottom: 1px solid var(--rule); }
       .summary, .key-intro { padding: 17px 18px; }
-      .data-table-wrap { margin-inline: 0; border-radius: 14px; }
     }
 
     @page { size: Letter; margin: .55in; }
@@ -141,8 +134,6 @@
       .toc-list { display: block; padding: 8px 18px; }
       .toc-list li { border: 0; }
       .toc-list a { padding: 3px 0; }
-      .data-table { min-width: 0; font-size: 7.5px; }
-      .data-table th, .data-table td { padding: 5px 6px; }
       h1, h2, .summary, .subheading { break-after: avoid; }
       p, li, tr { orphans: 3; widows: 3; }
     }
@@ -184,14 +175,9 @@
       return safe
         .replace(/^(In Short:)/, '<strong>$1</strong>')
         .replace(/^(Questions or concerns\?)/, '<strong>$1</strong>')
-        .replace(/^(What personal information do we process\?)/, '<strong>$1</strong>')
-        .replace(/^(Do we process any sensitive personal information\?)/, '<strong>$1</strong>')
-        .replace(/^(Do we collect any information from third parties\?)/, '<strong>$1</strong>')
-        .replace(/^(How do we process your information\?)/, '<strong>$1</strong>')
-        .replace(/^(How do we keep your information safe\?)/, '<strong>$1</strong>')
-        .replace(/^(What are your rights\?)/, '<strong>$1</strong>')
-        .replace(/^(How do you exercise your rights\?)/, '<strong>$1</strong>')
-        .replace(/^(Sensitive Information\.|Payment Data\.|Application Data\.|Mobile Device Data\.|Log and Usage Data\.|Device Data\.|Location Data\.|Business Transfers\.)/, '<strong>$1</strong>');
+        .replace(/^(Practice content\.|Recordings\.|Device backup\.|User-directed sharing\.|Camera and microphone\.|Apple tracking permission\.|Device and network information\.|Advertising and interaction information\.|Diagnostics and performance\.|Google UMP\.|Personalized ads\.|Non-personalized or limited ads\.|Apple ATT\.|No consent state\.|PostHog status\.|Events and technical context\.|Data boundaries\.|Hosting, IP handling, and retention\.|Purchases\.|Support\.|Google\.|Apple\.|PostHog\.|Service protection\.|Local app data\.|Advertising choices\.|Google data\.|PostHog data\.|Support messages\.|Apple data\.)/, '<strong>$1</strong>')
+        .replace(/(https:\/\/[^\s<]+[^\s<.,;:!?)])/g, '<a href="$1" rel="external noreferrer">$1</a>')
+        .replace(/(^|\s)(support@martinezstudio\.dev)(?=[\s.,;:]|$)/g, '$1<a href="mailto:$2">$2</a>');
     }
 
     function normalizeText(text) {
@@ -200,27 +186,6 @@
         .replace(/\s+"\)/g, '")')
         .replace(/"process\s+"/g, '"process"')
         .replace(/\s+([,.;:?!])/g, '$1');
-    }
-
-    function buildDataTable() {
-      const rows = [
-        ['A. Identifiers', 'Contact details, including name, postal address, telephone number, online identifier, IP address, email address, and account name', 'YES'],
-        ['B. California Customer Records information', 'Name, contact information, education, employment history, and financial information', 'NO'],
-        ['C. Protected classifications', 'Gender, age, date of birth, race and ethnicity, national origin, marital status, and other demographic data', 'NO'],
-        ['D. Commercial information', 'Transaction information, purchase history, financial details, and payment information', 'YES'],
-        ['E. Biometric information', 'Fingerprints and voiceprints', 'NO'],
-        ['F. Internet or network activity', 'Browsing and search history, online behavior, interest data, and interactions with websites, applications, systems, and advertisements', 'YES'],
-        ['G. Geolocation data', 'Device location', 'YES'],
-        ['H. Audio, electronic, or sensory information', 'Images and audio, video, or call recordings created in connection with business activities', 'YES'],
-        ['I. Professional or employment information', 'Business contact details, job title, work history, and professional qualifications', 'NO'],
-        ['J. Education information', 'Student records and directory information', 'NO'],
-        ['K. Inferences', 'Inferences used to create a profile or summary of preferences and characteristics', 'YES'],
-        ['L. Sensitive personal information', '', 'NO']
-      ];
-      const wrap = document.createElement('div');
-      wrap.className = 'data-table-wrap';
-      wrap.innerHTML = `<table class="data-table"><thead><tr><th>Category</th><th>Examples</th><th>Collected</th></tr></thead><tbody>${rows.map(row => `<tr>${row.map(cell => `<td>${escapeHtml(cell)}</td>`).join('')}</tr>`).join('')}</tbody></table>`;
-      return wrap;
     }
 
     function extractContents(lines) {
@@ -270,26 +235,15 @@
 
       let inTableOfContents = false;
       let tableOfContentsRendered = false;
-      let skippingExtractedTable = false;
       let sectionIndex = 0;
 
-      const bulletStarts = /^(Download and use|Engage with us|Log and Usage Data\.|Device Data\.|Location Data\.|To respond to user inquiries|To request feedback|To deliver targeted advertising|To evaluate and improve|To identify usage trends|Receiving help through|Participation in customer|Facilitation in the delivery|Category [ADFGHK] -|Right to )/;
-      const subheadingStarts = /^(Personal information you disclose to us|Information automatically collected|Categories of Personal Information We Collect|Sources of Personal Information|How We Use and Share Personal Information|Will your information be shared with anyone else\?|Your Rights|How to Exercise Your Rights|Request Verification|Appeals)$/;
+      const bulletStarts = /^(Practice content\.|Recordings\.|Device backup\.|User-directed sharing\.|Camera and microphone\.|Apple tracking permission\.|Device and network information\.|Advertising and interaction information\.|Diagnostics and performance\.|Google UMP\.|Personalized ads\.|Non-personalized or limited ads\.|Apple ATT\.|No consent state\.|PostHog status\.|Events and technical context\.|Data boundaries\.|Hosting, IP handling, and retention\.|Purchases\.|Support\.|Google\.|Apple\.|PostHog\.|Service protection\.|Local app data\.|Advertising choices\.|Google data\.|PostHog data\.|Support messages\.|Apple data\.)/;
+      const subheadingStarts = /^(Questions, privacy requests, or concerns can be sent to:)$/;
 
       blocks.forEach((lines, index) => {
         if (index < 2) return;
         const text = normalizeText(lines.join(' ').replace(/\s+/g, ' ').trim());
         let element;
-
-        if (/^CategoryExamplesCollected/.test(text)) {
-          fragment.appendChild(buildDataTable());
-          skippingExtractedTable = true;
-          return;
-        }
-        if (skippingExtractedTable) {
-          if (!/^We may also collect other personal information/.test(text)) return;
-          skippingExtractedTable = false;
-        }
 
         if (inTableOfContents && !tableOfContentsRendered && /^1\.\s/.test(lines[0])) {
           const items = extractContents(lines);
